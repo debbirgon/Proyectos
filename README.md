@@ -7,3 +7,8 @@ El pastillero es un dispositivo mecánico en el que se depositarán las pastilla
 La app contará con la información de las pastillas, y la posología. Pasará la información al microcontrolador del pastillero.
 
 La smartband deberá contar con conexión 3G y ubicación GPS en caso de accidente/imprevisto del usuario
+
+
+Cambios reflejados: 
+
+Mi cambio de manera correcta @crirompov
