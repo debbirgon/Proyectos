@@ -1,0 +1,32 @@
+#include mbed.h
+
+BusOut motor_out(PC_0, PC_1, PC_2, PC_3);  // blue - pink - yellow - orange
+
+int step = 0; 
+int dir = 0; // direction
+
+int main()
+{
+    while(1)
+    { 
+        switch(step)
+        { 
+            case 0: motor_out = 0x1; break;  // 0001
+            case 1: motor_out = 0x3; break;  // 0011
+            case 2: motor_out = 0x2; break;  // 0010   
+            case 3: motor_out = 0x6; break;  // 0110
+            case 4: motor_out = 0x4; break;  // 0100
+            case 5: motor_out = 0xC; break;  // 1100
+            case 6: motor_out = 0x8; break;  // 1000
+            case 7: motor_out = 0x9; break;  // 1001
+            
+            default: motor_out = 0x0; break; // 0000
+        }
+  
+        if(dir) step++; else step--; 
+        if(step>7)step=0; 
+        if(step<0)step=7; 
+        wait(0.015);  // speed
+    }
+}
+
