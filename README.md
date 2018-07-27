@@ -12,3 +12,4 @@ La smartband deberá contar con conexión 3G y ubicación GPS en caso de acciden
 Cambios reflejados: 
 
 - Mi cambio de manera correcta @crirompov
+- Mi cambio de manera correcta @debbirgon
