@@ -1,4 +1,4 @@
-# medispenser
+﻿# medispenser
 
 Medispenser es una solución integral compuesta de Pastillero+APP+Smartband
 
@@ -13,3 +13,4 @@ Cambios reflejados:
 
 - Mi cambio de manera correcta @crirompov
 - Mi cambio de manera correcta @debbirgon
+- Mi cambio de manera correcta @triadansk
