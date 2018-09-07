@@ -1,1 +1,7 @@
 .DS_Store
+
+##Carpeta de modulos de node:
+node_modules
+
+##Archivos de configuración del entorno:
+.env
