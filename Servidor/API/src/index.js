@@ -1,8 +1,17 @@
-import express from 'express';
-
+import express from 'express'
 import config from './config'
+import sequelize from '../common/mysql.js'
 
 let _server
+
+//Probamos la conexión con la base de datos
+sequelize.authenticate().then(err => {
+	if (err) {
+	   console.log('Hay un error con la conexión de la base de datos');
+	} else {
+	   console.log('La conexión con la base de datos ha tenido éxito');
+	}
+});
 
 const server = {
 	start(){
