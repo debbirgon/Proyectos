@@ -2,12 +2,12 @@ import sequelize from '../common/mysql.js'
 import Sequelize from 'sequelize'
 
 const Perfil = sequelize.define(
-	'Perfiles',
+	'perfiles',
 	{
-		idPerfiles: {
+		idperfiles: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idPerfiles',
+			field: 'idperfiles',
 			allowNull: false,
 			primaryKey: true
 		},
@@ -25,6 +25,20 @@ const Perfil = sequelize.define(
 	{
 		timestamps: false,
 		freezeTableName: true //Desactiva la modificación de los campos de la base de datos
+	}, {
+		getterMethods: {
+			fullName: function () {
+				return this.getDataValue('nombre') + ' y ' + this.getDataValue('descripcion')
+			}
+		},
+		setterMethods: {
+			fullName: function (value) {
+				var parts = value.split(' ')
+	
+				this.setDataValue('lastName', parts[parts.length-1])
+				this.setDataValue('firstName', parts[0]) // this of course does not work if the user has several first names
+			}
+		}
 	}
 )
 

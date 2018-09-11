@@ -1,6 +1,13 @@
 import express from 'express'
 import config from './config'
 import sequelize from '../common/mysql.js'
+import Sequelize from 'sequelize'
+
+//Modelos:
+import models from '../models'
+import Perfil from models.Perfil
+
+const BASE_API_PATH = "/api/v1";
 
 let _server
 
@@ -21,11 +28,18 @@ const server = {
 
 		//Rutas:
 
-		app.get('/', (req, res, next) => {
-			res
-			.status(200)
-			.json({ data: "prueba metodo get"})
-
+		app.get('/perfiles', (req, res, next) => {
+			console.log(Date() + " - GET /perfiles")
+			
+			/*
+			sequelize.Sequelize.Perfil.findOne({ where: {nombre:  'Cuidador'}}).then(data => {
+				console.log(data.data)
+				res.send(data.data)
+			})
+			console.log("con (): "+Perfil.fullName())
+			console.log("sin (): "+Perfil.fullName)
+			res.send(Perfil.fullName())
+			*/
 		})
 
 		app.post('/', (req, res, next) => {
@@ -47,7 +61,7 @@ const server = {
 		})
 
 
-		_server = app.listen('9000', () => {
+		_server = app.listen(process.env.PORT, () => {
 			if(process.env.NODE_ENV !== "test"){
 				console.log("Servidor corriendo en http://localhost:9000")
 			}

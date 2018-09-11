@@ -11,6 +11,7 @@ export default app => {
 
     app.set("env", SETTINGS.parsed.ENV)
     app.set("config", SETTINGS.parsed)
+    app.set("port", SETTINGS.parsed.PORT)
     app.locals.env = app.get("env")
     app.locals.config = app.get("config")
 
