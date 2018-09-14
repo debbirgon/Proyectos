@@ -1,0 +1,10 @@
+DROP TABLES dosis;
+DROP TABLES tratamientos;
+DROP TABLES medicamentos;
+DROP TABLES cargas;
+DROP TABLES spds;
+DROP TABLES dependientes;
+DROP TABLES usuarios;
+DROP TABLES perfiles;
+DROP TABLES cuidadores;
+DROP TABLES personas;
