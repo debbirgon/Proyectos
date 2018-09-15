@@ -4,7 +4,7 @@
   "description": "Api orientada al manejo de los datos del ecosistema Medispenser",
   "main": "index.js",
   "scripts": {
-    "start": "node --require 'babel-register' src/index.js",
+    "start": "node --require 'babel-register' index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
