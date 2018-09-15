@@ -8,3 +8,6 @@ Tecnologias internas a usar:
 Tecnologias externas (conexion con servidor) a usar:
 - HTTP (A priori y posiblemente sujeto a cambios)
 - Microcontrolador asociado con conectividad 3G
+
+
+AT+CSTT = "airtelnet.es","vodafone","vodafone" // APN de vodafone GSM
