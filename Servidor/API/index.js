@@ -31,7 +31,7 @@ const server = {
 
 		//Rutas:
 
-		app.get('/perfiles', (req, res, next) => {
+		app.get(BASE_API_PATH + '/perfiles', (req, res, next) => {
 			console.log(Date() + " - GET /perfiles")
 			Perfil.findAll().then(projects => {
 				// projects will be an array of all Project instances
