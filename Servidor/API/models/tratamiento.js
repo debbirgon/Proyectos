@@ -4,12 +4,12 @@ import Dependiente from './dependiente'
 import Spd from './spd'
 
 const Tratamiento = sequelize.define(
-	'Tratamientos',
+	'tratamientos',
 	{
-		idTratamientos: {
+		idtratamientos: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idTratamientos',
+			field: 'idtratamientos',
 			allowNull: false,
 			primaryKey: true
 		},

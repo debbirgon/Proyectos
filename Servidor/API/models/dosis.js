@@ -4,12 +4,12 @@ import Medicamento from './medicamento'
 import Tratamiento from './tratamiento'
 
 const Dosis = sequelize.define(
-	'Dosis',
+	'dosis',
 	{
-		idDosis: {
+		iddosis: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idDosis',
+			field: 'iddosis',
 			allowNull: false,
 			primaryKey: true
 		},
