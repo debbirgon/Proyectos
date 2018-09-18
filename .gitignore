@@ -5,3 +5,8 @@ node_modules
 
 ##Archivos de configuración del entorno:
 .env
+
+##Archivos subidos desde el pc de chus (Cosas de configuración de github)
+github_settings.xml
+vcs.xm
+_windows
