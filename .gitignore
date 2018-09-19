@@ -1,13 +1,9 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
 .DS_Store
-
-##Carpeta de modulos de node:
-node_modules
-
-##Archivos de configuración del entorno:
-.env
-
-##Archivos subidos desde el pc de chus (Cosas de configuración de github)
-github_settings.xml
-vcs.xm
-_windows
-debugger.xml
+/build
+/captures
+.externalNativeBuild
