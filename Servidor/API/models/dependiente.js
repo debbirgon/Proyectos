@@ -4,35 +4,35 @@ import Persona from './persona'
 import Cuidador from './cuidador'
 
 const Dependiente = sequelize.define(
-	'Dependientes',
+	'DEPENDIENTES',
 	{
-		idDependientes: {
+		ID: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idDependientes',
+			field: 'ID',
 			allowNull: false,
 			primaryKey: true
 		},
-		alias: {
+		ALIAS: {
 			type: Sequelize.STRING(45),
 			allowNull: false,
-			field: 'alias'
+			field: 'ALIAS'
 		},
-		persona: {
+		ID_PERSONA: {
 			type: Sequelize.BIGINT(11),
 			references: {
 				model: Persona,
-				key: 'idPersonas'
+				key: 'ID'
 			},
-			field: 'persona'
+			field: 'ID_PERSONA'
 		},
-		cuidador: {
+		ID_CUIDADOR: {
 			type: Sequelize.BIGINT(11),
 			references: {
 				model: Cuidador,
-				key: 'idCuidadores'
+				key: 'ID'
 			},
-			field: 'cuidador'
+			field: 'ID_CUIDADOR'
 		}
 	},
 	{

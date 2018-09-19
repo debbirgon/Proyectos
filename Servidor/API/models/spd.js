@@ -2,12 +2,12 @@ import sequelize from '../common/mysql.js'
 import Sequelize from 'sequelize'
 
 const Spd = sequelize.define(
-	'Spds',
+	'SPDS',
 	{
-		idSpds: {
+		ID: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idSpds',
+			field: 'ID',
 			allowNull: false,
 			primaryKey: true
 		}

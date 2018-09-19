@@ -2,43 +2,29 @@ import sequelize from '../common/mysql.js'
 import Sequelize from 'sequelize'
 
 const Perfil = sequelize.define(
-	'perfiles',
+	'PERFILES',
 	{
-		idperfiles: {
+		ID: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idperfiles',
+			field: 'ID',
 			allowNull: false,
 			primaryKey: true
 		},
-		nombre: {
+		NOMBRE: {
 			type: Sequelize.STRING(45),
 			allowNull: false,
-			field: 'nombre'
+			field: 'NOMBRE'
 		},
-		descripcion: {
-			type: Sequelize.STRING(45),
+		DESCRIPCION: {
+			type: Sequelize.STRING(255),
 			allowNull: true,
-			field: 'descripcion'
+			field: 'DESCRIPCION'
 		}
 	},
 	{
 		timestamps: false,
 		freezeTableName: true //Desactiva la modificación de los campos de la base de datos
-	}, {
-		getterMethods: {
-			fullName: function () {
-				return this.getDataValue('nombre') + ' y ' + this.getDataValue('descripcion')
-			}
-		},
-		setterMethods: {
-			fullName: function (value) {
-				var parts = value.split(' ')
-	
-				this.setDataValue('lastName', parts[parts.length-1])
-				this.setDataValue('firstName', parts[0]) // this of course does not work if the user has several first names
-			}
-		}
 	}
 )
 

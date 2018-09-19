@@ -1,38 +1,38 @@
 import sequelize from '../common/mysql.js'
 import Sequelize from 'sequelize'
-import User from './spd'
+import Spd from './spd'
 import Medicamento from './medicamento'
 
 const Carga = sequelize.define(
-	'Cargas',
+	'CARGAS',
 	{
-		idCargas: {
+		ID: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idCargas',
+			field: 'ID',
 			allowNull: false,
 			primaryKey: true
 		},
-		spd: {
+		ID_SPD: {
 			type: Sequelize.BIGINT(11),
 			references: {
 				model: Spd,
-				key: 'idSpds'
+				key: 'ID'
 			},
-			field: 'spd'
+			field: 'ID_SPD'
 		},
-		medicamento: {
+		ID_MEDICAMENTO: {
 			type: Sequelize.BIGINT(11),
 			references: {
 				model: Medicamento,
-				key: 'idMedicamento'
+				key: 'ID'
 			},
-			field: 'medicamento'
+			field: 'ID_MEDICAMENTO'
 		},
-		cantidad: {
+		CANTIDAD: {
 			type: Sequelize.BIGINT(11),
 			allowNull: false,
-			field: 'cantidad'
+			field: 'CANTIDAD'
 		}
 	},
 	{

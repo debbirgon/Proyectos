@@ -2,34 +2,34 @@ import sequelize from '../common/mysql.js'
 import Sequelize from 'sequelize'
 
 const Persona = sequelize.define(
-	'Personas',
+	'PERSONAS',
 	{
-		idPersonas: {
+		ID: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idPersonas',
+			field: 'ID',
 			allowNull: false,
 			primaryKey: true
 		},
-		dni: {
+		DNI: {
 			type: Sequelize.STRING(9),
 			allowNull: false,
-			field: 'dni'
+			field: 'DNI'
 		},
-		nombre: {
+		NOMBRE: {
 			type: Sequelize.STRING(45),
 			allowNull: false,
-			field: 'nombre'
+			field: 'NOMBRE'
 		},
-		apellidos: {
+		APELLIDOS: {
 			type: Sequelize.STRING(45),
 			allowNull: false,
-			field: 'apellidos'
+			field: 'APELLIDOS'
 		},
-		fecha_nacimiento: {
+		FECHA_NACIMIENTO: {
 			type: Sequelize.DATE,
 			allowNull: false,
-			field: 'fecha_nacimiento'
+			field: 'FECHA_NACIMIENTO'
 		}
 	},
 	{

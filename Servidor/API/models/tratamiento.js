@@ -4,30 +4,30 @@ import Dependiente from './dependiente'
 import Spd from './spd'
 
 const Tratamiento = sequelize.define(
-	'tratamientos',
+	'TRATAMIENTOS',
 	{
-		idtratamientos: {
+		ID: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idtratamientos',
+			field: 'ID',
 			allowNull: false,
 			primaryKey: true
 		},
-		dependiente: {
+		ID_DEPENDIENTE: {
 			type: Sequelize.BIGINT(11),
 			references: {
 				model: Dependiente,
-				key: 'idDependientes'
+				key: 'ID'
 			},
-			field: 'dependiente'
+			field: 'ID_DEPENDIENTE'
 		},
-		spd: {
+		ID_SPD: {
 			type: Sequelize.BIGINT(11),
 			references: {
 				model: Spd,
-				key: 'idSpds'
+				key: 'ID'
 			},
-			field: 'spd'
+			field: 'ID_SPD'
 		}
 	},
 	{
