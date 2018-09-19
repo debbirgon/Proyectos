@@ -3,22 +3,22 @@ import Sequelize from 'sequelize'
 import Persona from './persona'
 
 const Cuidador = sequelize.define(
-	'Cuidadores',
+	'CUIDADORES',
 	{
-		idCuidadores: {
+		ID: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idCuidadores',
+			field: 'ID',
 			allowNull: false,
 			primaryKey: true
 		},
-		persona: {
+		ID_PERSONA: {
 			type: Sequelize.BIGINT(11),
 			references: {
 				model: Persona,
-				key: 'idPersonas'
+				key: 'ID'
 			},
-			field: 'persona'
+			field: 'ID_PERSONA'
 		}
 	},
 	{

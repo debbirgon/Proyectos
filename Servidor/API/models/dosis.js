@@ -4,40 +4,40 @@ import Medicamento from './medicamento'
 import Tratamiento from './tratamiento'
 
 const Dosis = sequelize.define(
-	'dosis',
+	'DOSIS',
 	{
-		iddosis: {
+		ID: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'iddosis',
+			field: 'ID',
 			allowNull: false,
 			primaryKey: true
 		},
-		hora_inicio: {
+		HORA_INICIO: {
 			type: Sequelize.TIME,
 			allowNull: false,
-			field: 'hora_inicio'
+			field: 'HORA_INICIO'
 		},
-		veces_dia: {
+		VECES_POR_DIA: {
 			type: Sequelize.BIGINT(11),
 			allowNull: false,
-			field: 'veces_dia'
+			field: 'VECES_POR_DIA'
 		},
-		medicamento: {
+		ID_MEDICAMENTO: {
 			type: Sequelize.BIGINT(11),
 			references: {
 				model: Medicamento,
-				key: 'idMedicamentos'
+				key: 'ID'
 			},
-			field: 'medicamento'
+			field: 'ID_MEDICAMENTO'
 		},
-		tratamiento: {
+		ID_TRATAMIENTO: {
 			type: Sequelize.BIGINT(11),
 			references: {
 				model: Tratamiento,
-				key: 'idTratamientos'
+				key: 'ID'
 			},
-			field: 'tratamiento'
+			field: 'ID_TRATAMIENTO'
 		}
 	},
 	{

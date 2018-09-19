@@ -4,40 +4,40 @@ import Perfil from './perfil'
 import Cuidador from './cuidador'
 
 const Usuario = sequelize.define(
-	'Usuarios',
+	'USUARIOS',
 	{
-		idUsuario: {
+		ID: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idUsuario',
+			field: 'ID',
 			allowNull: false,
 			primaryKey: true
 		},
-		username: {
+		USERNAME: {
 			type: Sequelize.STRING(45),
 			allowNull: false,
-			field: 'username'
+			field: 'USERNAME'
 		},
-		password: {
+		PASSWORD: {
 			type: Sequelize.STRING(45),
 			allowNull: false,
-			field: 'password'
+			field: 'PASSWORD'
 		},
-		cuidador_id: {
+		ID_CUIDADOR: {
 			type: Sequelize.BIGINT(11),
 			references: {
 				model: Cuidador,
-				key: 'idCuidadores'
+				key: 'ID'
 			},
-			field: 'cuidador_id'
+			field: 'ID_CUIDADOR'
 		},
-		E_perfil: {
+		ID_PERFIL: {
 			type: Sequelize.BIGINT(11),
 			references: {
 				model: Perfil,
-				key: 'idPerfiles'
+				key: 'ID'
 			},
-			field: 'E_perfil'
+			field: 'ID_PERFIL'
 		}
 	},
 	{

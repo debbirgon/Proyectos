@@ -2,19 +2,19 @@ import sequelize from '../common/mysql.js'
 import Sequelize from 'sequelize'
 
 const Medicamento = sequelize.define(
-	'Medicamentos',
+	'MEDICAMENTOS',
 	{
-		idMedicamento: {
+		ID: {
 			type: Sequelize.BIGINT(11),
 			autoIncrement: true,
-			field: 'idMedicamento',
+			field: 'ID',
 			allowNull: false,
 			primaryKey: true
 		},
-		nombre: {
+		NOMBRE: {
 			type: Sequelize.STRING(45),
 			allowNull: false,
-			field: 'nombre'
+			field: 'NOMBRE'
 		}
 	},
 	{
