@@ -19,13 +19,15 @@ const router = express.Router()
 			var codeSpd = parseInt(req.params.spd)
 			//var dosisRet = new Array();
 			console.log(Date() + " - GET /dosis/" + codeSpd)
-			Tratamiento.findAll({ where: { spd: codeSpd } }).then(projects => {
+			Tratamiento.findAll({ where: { ID_SPD: codeSpd } }).then(projects => {
 				projects.forEach(e => {
-					Dosis.findAll({where: {tratamiento: e.idtratamientos}}).then(p => {
-						p.forEach(dosis => {
+					Dosis.findAll({where: {ID_TRATAMIENTO: e.ID}}).then(p => {
+						console.log("p --> "+p)
+						res.send(p)
+						/* p.forEach(dosis => {
 							res.send(dosis)
 							//dosisRet.push(dosis)
-						})
+						}) */
 					})
 				})
 		  })
