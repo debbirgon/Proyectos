@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.windows.medispenser.LoginActivity">
+    tools:context="com.example.windows.medispenser.UI.LoginActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,6 +37,7 @@
             android:id="@+id/et_user"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:inputType="text"
             android:layout_height="wrap_content"
             android:paddingVertical="4dp"
             android:background="@drawable/square" />
@@ -63,6 +64,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:id="@+id/et_pass"
             android:background="@drawable/square"
             android:inputType="textPassword"

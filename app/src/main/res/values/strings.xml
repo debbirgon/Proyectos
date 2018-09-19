@@ -49,4 +49,9 @@
     <string name="has_takes">HAS_TAKES</string>
     <string name="wrong_size">Cada uno de los campos debe tener 2 números</string>
     <string name="wrong_hour">Hora seleccionada errónea, por favor, revise los números introducidos</string>
+    <string name="patient_list">Lista de pacientes</string>
+    <string name="patient_name">Nombre del paciente</string>
+    <string name="dni">DNI:</string>
+    <string name="birthday">Fecha de nacimiento:</string>
+    <string name="add_patient">Añadir paciente</string>
 </resources>

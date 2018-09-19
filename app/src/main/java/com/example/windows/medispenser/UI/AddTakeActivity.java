@@ -1,4 +1,4 @@
-package com.example.windows.medispenser;
+package com.example.windows.medispenser.UI;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.windows.medispenser.R;
 
 import java.util.ArrayList;
 import java.util.HashSet;
