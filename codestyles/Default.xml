@@ -24,4 +24,14 @@
       <pair source="c" header="h" fileNamingConvention="NONE" />
     </extensions>
   </Objective-C-extensions>
+  <XML>
+    <option name="XML_KEEP_WHITESPACES" value="true" />
+  </XML>
+  <codeStyleSettings language="XML">
+    <indentOptions>
+      <option name="USE_TAB_CHARACTER" value="true" />
+      <option name="SMART_TABS" value="true" />
+      <option name="KEEP_INDENTS_ON_EMPTY_LINES" value="true" />
+    </indentOptions>
+  </codeStyleSettings>
 </code_scheme>
