@@ -1,4 +1,4 @@
-package com.example.windows.medispenser.UI;
+package com.example.windows.medispenser.ui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,8 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.windows.medispenser.R;
+import com.example.windows.medispenser.api.DosisService;
+import com.example.windows.medispenser.util.Constants;
 
-public class MainActivity extends AppCompatActivity {
+public class SpdActivity extends AppCompatActivity {
 
     ImageView ic_back;
     TextView user_name;
@@ -25,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_spd);
+
 
         ic_back = findViewById(R.id.ic_back);
         user_name = findViewById(R.id.user_name);
@@ -55,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-                intent.putExtra(getString(R.string.num_level),1);
+                intent.putExtra(Constants.LEVEL,1);
                 startActivity(intent);
             }
         });
@@ -63,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-                intent.putExtra(getString(R.string.num_level),2);
+                intent.putExtra(Constants.LEVEL,2);
                 startActivity(intent);
             }
         });
@@ -71,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-                intent.putExtra(getString(R.string.num_level),3);
+                intent.putExtra(Constants.LEVEL,3);
                 startActivity(intent);
             }
         });
