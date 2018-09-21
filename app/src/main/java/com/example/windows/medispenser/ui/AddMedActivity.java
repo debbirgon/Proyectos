@@ -1,4 +1,4 @@
-package com.example.windows.medispenser.UI;
+package com.example.windows.medispenser.ui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.windows.medispenser.R;
+import com.example.windows.medispenser.util.Constants;
 
 import static java.lang.Integer.valueOf;
 
@@ -28,7 +29,7 @@ public class AddMedActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_med);
 
         Bundle extras = getIntent().getExtras();
-        level = extras.getInt(getString(R.string.num_level));
+        level = extras.getInt(Constants.LEVEL);
         Boolean hasMed = extras.getBoolean(getString(R.string.has_med));
         et_name_of_med = findViewById(R.id.et_name_of_med);
         et_amount = findViewById(R.id.et_amount);
@@ -46,7 +47,7 @@ public class AddMedActivity extends AppCompatActivity {
             public void onClick(View view) {
                 removeFromPreferences(level);
                 Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-                intent.putExtra(getString(R.string.num_level),level);
+                intent.putExtra(Constants.LEVEL,level);
                 startActivity(intent);
                 finish();
             }
@@ -90,7 +91,7 @@ public class AddMedActivity extends AppCompatActivity {
                             break;
                     }
                     Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-                    intent.putExtra(getString(R.string.num_level),level);
+                    intent.putExtra(Constants.LEVEL,level);
                     startActivity(intent);
                     finish();
                 }
@@ -124,7 +125,7 @@ public class AddMedActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-        intent.putExtra(getString(R.string.num_level),level);
+        intent.putExtra(Constants.LEVEL,level);
         startActivity(intent);
         finish();
     }

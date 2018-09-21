@@ -1,4 +1,4 @@
-package com.example.windows.medispenser.UI;
+package com.example.windows.medispenser.ui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.windows.medispenser.R;
+import com.example.windows.medispenser.util.Constants;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -34,7 +35,7 @@ public class AddTakeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_takes);
 
         Bundle extras = getIntent().getExtras();
-        level = extras.getInt(getString(R.string.num_level));
+        level = extras.getInt(Constants.LEVEL);
         Boolean hasTakes = extras.getBoolean(getString(R.string.has_takes));
         et_hour = findViewById(R.id.et_hour);
         et_minute = findViewById(R.id.et_minute);
@@ -70,7 +71,7 @@ public class AddTakeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 removeFromPreferences(level);
                 Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-                intent.putExtra(getString(R.string.num_level),level);
+                intent.putExtra(Constants.LEVEL,level);
                 startActivity(intent);
                 finish();
             }
@@ -115,7 +116,7 @@ public class AddTakeActivity extends AppCompatActivity {
                             break;
                     }
                     Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-                    intent.putExtra(getString(R.string.num_level),level);
+                    intent.putExtra(Constants.LEVEL,level);
                     startActivity(intent);
                     finish();
                 }

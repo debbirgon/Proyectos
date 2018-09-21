@@ -1,4 +1,4 @@
-package com.example.windows.medispenser.UI;
+package com.example.windows.medispenser.ui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.windows.medispenser.R;
+import com.example.windows.medispenser.util.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +40,7 @@ public class LevelActivity extends AppCompatActivity {
         initView();
 
         Bundle extras = getIntent().getExtras();
-        level = extras.getInt(getString(R.string.num_level));
+        level = extras.getInt(Constants.LEVEL);
         tv_level.setText(getString(R.string.level)+" "+ level);
 
         String medicine = null;
@@ -107,7 +108,7 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), AddMedActivity.class);
-                intent.putExtra(getString(R.string.num_level),level);
+                intent.putExtra(Constants.LEVEL,level);
                 intent.putExtra(getString(R.string.has_med),hasMed);
                 startActivity(intent);
                 finish();
@@ -119,7 +120,7 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), AddTakeActivity.class);
-                intent.putExtra(getString(R.string.num_level),level);
+                intent.putExtra(Constants.LEVEL,level);
                 intent.putExtra(getString(R.string.has_takes),hasTakes);
                 startActivity(intent);
                 finish();
