@@ -42,11 +42,10 @@ public class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.
     @Override
     public void onBindViewHolder(@NonNull PatientListViewHolder holder, final int position) {
         final Patient patient = patientList.get(position);
-        String dni = holder.dni.getText().toString()+ " " + patient.getDni();
-        String birthday = holder.birthday.getText().toString()+ "\n" + patient.getBirthday();
 
-        holder.patient_name.setText(patient.getName());
-        holder.dni.setText(dni);
+        String birthday = holder.birthday.getText().toString()+ ":\n" + patient.getBirthday();
+
+        holder.patient_name.setText(patient.getName() + " " + patient.getSurname());
         holder.birthday.setText(birthday);
 
         holder.ll_patient.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +54,7 @@ public class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.
                 Intent intent = new Intent(mContext, SpdActivity.class);
                 intent.putExtra(Constants.PATIENT,patient);
                 mContext.startActivity(intent);
+                
             }
         });
     }
@@ -67,7 +67,6 @@ public class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.
     public static class PatientListViewHolder extends RecyclerView.ViewHolder{
 
         TextView patient_name;
-        TextView dni;
         TextView birthday;
         LinearLayout ll_patient;
 
@@ -75,7 +74,6 @@ public class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.
             super(itemView);
 
             patient_name = itemView.findViewById(R.id.patient_name);
-            dni = itemView.findViewById(R.id.dni);
             birthday = itemView.findViewById(R.id.birthday);
             ll_patient = itemView.findViewById(R.id.ll_patient);
         }

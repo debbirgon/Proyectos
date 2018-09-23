@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.windows.medispenser.R;
+import com.example.windows.medispenser.util.Constants;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -19,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText et_pass;
     Button btn_access;
     Button btn_createUser;
-    CheckBox cb_keepSession;
     SharedPreferences sharedPreferences;
 
     @Override
@@ -31,14 +31,14 @@ public class LoginActivity extends AppCompatActivity {
         et_pass = findViewById(R.id.et_pass);
         btn_access = findViewById(R.id.btn_access);
         btn_createUser = findViewById(R.id.btn_createUser);
-        cb_keepSession = findViewById(R.id.cb_keepSession);
         sharedPreferences = getApplicationContext()
-                .getSharedPreferences(getString(R.string.shared_pref), MODE_PRIVATE);
+                .getSharedPreferences(Constants.SHARED_PREF, MODE_PRIVATE);
 
-        Boolean keepSession = sharedPreferences.getBoolean(getString(R.string.keep),false);
+        Boolean keepSession = sharedPreferences.getBoolean(Constants.KEEP,false);
 
         if(keepSession){
             startActivity(new Intent(getApplicationContext(), PatientListActivity.class));
+            finish();
         }
 
         btn_access.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                 }else if(user_pref.equals(et_user.getText().toString())&&
                         pass_pref.equals(et_pass.getText().toString())){
                     startActivity(new Intent(getApplicationContext(), PatientListActivity.class));
+                    sharedPreferences.edit().putBoolean(Constants.KEEP,true).apply();
                     finish();
                 }else{
                     Toast.makeText(getApplicationContext(), getString(R.string.login_fail),
@@ -80,16 +81,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        cb_keepSession.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if(isChecked){
-                    sharedPreferences.edit().putBoolean(getString(R.string.keep),true).apply();
-                }else{
-                    sharedPreferences.edit().putBoolean(getString(R.string.keep),false).apply();
-                }
-            }
-        });
 
     }
 }

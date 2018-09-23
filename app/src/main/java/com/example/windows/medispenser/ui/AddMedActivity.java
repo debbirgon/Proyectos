@@ -35,8 +35,7 @@ public class AddMedActivity extends AppCompatActivity {
         et_amount = findViewById(R.id.et_amount);
         btn_addMed_and_amount = findViewById(R.id.btn_addMed_and_amount);
         deleteMed = findViewById(R.id.deleteMed);
-        sharedPreferences = getApplicationContext().getSharedPreferences(getString(
-                R.string.shared_pref),MODE_PRIVATE);
+        sharedPreferences = getApplicationContext().getSharedPreferences(Constants.SHARED_PREF,MODE_PRIVATE);
 
         if(hasMed){
             deleteMed.setVisibility(View.VISIBLE);

@@ -6,7 +6,6 @@
     <string name="create_user">Crear usuario</string>
     <string name="keep_session">Mantener la sesión iniciada</string>
     <string name="access">Acceso</string>
-    <string name="shared_pref">PREF_MED</string>
     <string name="user_pref">USER_PREF</string>
     <string name="pass_pref">PASS_PREF</string>
     <string name="must_create_user">Debe crear el usuario antes de acceder.</string>
@@ -17,7 +16,7 @@
     <string name="level_1">Nivel 1</string>
     <string name="level_2">Nivel 2</string>
     <string name="level_3">Nivel 3</string>
-    <string name="exit">Salir</string>
+    <string name="exit">Cerrar sesión</string>
     <string name="user_name">Nombre de usuario:</string>
     <string name="add_med">Añadir medicamento</string>
     <string name="edit_med">Editar medicamento</string>
@@ -42,7 +41,6 @@
     <string name="wrong_number">La cantidad de pastillas introducidas debe ser un número del 1 al 7</string>
     <string name="deleteMed">Eliminar el medicamento actual</string>
     <string name="has_med">HAS_MED</string>
-    <string name="keep">KEEP</string>
     <string name="hour">Hora en formato 24h (hh : mm)</string>
     <string name="deleteTakes">Eliminar las tomas actuales</string>
     <string name="has_takes">HAS_TAKES</string>
@@ -51,6 +49,7 @@
     <string name="patient_list">Lista de pacientes</string>
     <string name="patient_name">Nombre del paciente</string>
     <string name="dni">DNI:</string>
-    <string name="birthday">Fecha de nacimiento:</string>
+    <string name="birthday">Fecha de nacimiento</string>
     <string name="add_patient">Añadir paciente</string>
+    <string name="surname">Apellidos</string>
 </resources>

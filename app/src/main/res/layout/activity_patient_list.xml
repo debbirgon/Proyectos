@@ -22,20 +22,35 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/rv_patient_list"
-        android:layout_weight="1.5">
+        android:layout_weight="1.25">
 
 
     </android.support.v7.widget.RecyclerView>
 
     <Button
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_add_patient"
+        android:background="@drawable/square"
         android:text="@string/add_patient"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"/>
+        android:layout_weight="0.10"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_exit"
+        android:background="@drawable/square"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/exit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black" />
+
 
 
 
