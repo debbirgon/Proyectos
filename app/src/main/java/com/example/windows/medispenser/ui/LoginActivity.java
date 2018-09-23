@@ -1,4 +1,4 @@
-package com.example.windows.medispenser.UI;
+package com.example.windows.medispenser.ui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         Boolean keepSession = sharedPreferences.getBoolean(getString(R.string.keep),false);
 
         if(keepSession){
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), PatientListActivity.class));
         }
 
         btn_access.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }else if(user_pref.equals(et_user.getText().toString())&&
                         pass_pref.equals(et_pass.getText().toString())){
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), PatientListActivity.class));
                     finish();
                 }else{
                     Toast.makeText(getApplicationContext(), getString(R.string.login_fail),
