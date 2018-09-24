@@ -41,8 +41,7 @@ public class AddTakeActivity extends AppCompatActivity {
         et_minute = findViewById(R.id.et_minute);
         btn_add_take = findViewById(R.id.btn_add_take);
         deleteTakes = findViewById(R.id.deleteTakes);
-        sharedPreferences = getApplicationContext().getSharedPreferences(getString(
-                R.string.shared_pref),MODE_PRIVATE);
+        sharedPreferences = getApplicationContext().getSharedPreferences(Constants.SHARED_PREF,MODE_PRIVATE);
         takes = new ArrayList<>();
 
         if(hasTakes){

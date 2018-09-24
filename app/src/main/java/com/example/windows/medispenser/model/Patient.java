@@ -7,14 +7,22 @@ import java.io.Serializable;
  */
 
 public class Patient implements Serializable {
+    private Integer id;
     private String name;
-    private String dni;
+    private String surname;
     private String birthday;
 
-    public Patient(String name, String dni, String birthday) {
+    public Patient(String name, String surname, Integer id, String birthday) {
         this.name = name;
-        this.dni = dni;
+        this.surname = surname;
+        this.id = id;
         this.birthday = birthday;
+    }
+
+    public Patient(){
+        this.name = "";
+        this.id = null;
+        this.birthday = "";
     }
 
     public String getName() {
@@ -25,12 +33,20 @@ public class Patient implements Serializable {
         this.name = name;
     }
 
-    public String getDni() {
-        return dni;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getBirthday() {

@@ -170,7 +170,6 @@ public class LevelActivity extends AppCompatActivity {
         btn_addTake = findViewById(R.id.btn_addTake);
         hasMed = false;
         hasTakes = false;
-        sharedPreferences = getApplicationContext().getSharedPreferences(getString
-                (R.string.shared_pref), MODE_PRIVATE);
+        sharedPreferences = getApplicationContext().getSharedPreferences(Constants.SHARED_PREF, MODE_PRIVATE);
     }
 }
