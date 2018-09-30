@@ -1,84 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
     android:orientation="vertical"
     tools:context="com.example.windows.medispenser.ui.SpdActivity">
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1.5"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/Science_Fair"
+        android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@android:color/black"
-        android:fontFamily="sans-serif-condensed"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="60dp"/>
+        android:textSize="60dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
         android:id="@+id/patient_name"
-        android:paddingLeft="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:fontFamily="@font/Comfortaa_Bold"
         android:text="@string/patient_name"
-        android:textColor="@color/colorPrimaryDark"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimaryDark" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:layout_marginHorizontal="40dp"
-        android:layout_gravity="center">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/level_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"
-            android:textColor="@android:color/black"
-            android:fontFamily="sans-serif-condensed"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:background="@drawable/rectangleGrey"
+            android:fontFamily="@font/Comfortaa_Bold"
+            android:gravity="center"
+            android:paddingVertical="8dp"
             android:text="@string/level_1"
-            android:gravity="center"
-            android:paddingVertical="8dp"
-            android:background="@drawable/oval" />
-
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black" />
 
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/level_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="6dp"
-            android:textColor="@android:color/black"
-            android:fontFamily="sans-serif-condensed"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:text="@string/level_2"
+            android:background="@drawable/rectangleGrey"
+            android:fontFamily="@font/Comfortaa_Bold"
             android:gravity="center"
             android:paddingVertical="8dp"
-            android:background="@drawable/oval" />
-
+            android:text="@string/level_2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black" />
 
 
         <TextView
+            android:id="@+id/level_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/level_3"
             android:layout_marginVertical="6dp"
-            android:textColor="@android:color/black"
-            android:fontFamily="sans-serif-condensed"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:text="@string/level_3"
+            android:background="@drawable/rectangleGrey"
+            android:fontFamily="@font/Comfortaa_Bold"
             android:gravity="center"
             android:paddingVertical="8dp"
-            android:background="@drawable/oval" />
+            android:text="@string/level_3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black" />
 
     </LinearLayout>
 

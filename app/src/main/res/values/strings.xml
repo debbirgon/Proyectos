@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">Medispenser</string>
+    <string name="app_name">MEDISPENSER</string>
     <string name="login">Login</string>
     <string name="user">Usuario</string>
     <string name="pass">Contraseña</string>
     <string name="create_user">Crear usuario</string>
     <string name="keep_session">Mantener la sesión iniciada</string>
-    <string name="access">Acceso</string>
+    <string name="access">Acceder</string>
+    <string name="forgotten_password">Reestablecer la contraseña</string>
     <string name="user_pref">USER_PREF</string>
     <string name="pass_pref">PASS_PREF</string>
     <string name="must_create_user">Debe crear el usuario antes de acceder.</string>
@@ -34,7 +35,7 @@
     <string name="pills_level_3">PILLS3</string>
     <string name="takes_level_3">TAKES3</string>
     <string name="level">Nivel</string>
-    <string name="name_of_med">Nombre del medicamento:</string>
+    <string name="name_of_med">Nombre del medicamento</string>
     <string name="add">Añadir</string>
     <string name="name">Nombre</string>
     <string name="amount">Nº de pastillas introducidas (1-7)</string>
@@ -48,8 +49,14 @@
     <string name="wrong_hour">Hora seleccionada errónea, por favor, revise los números introducidos</string>
     <string name="patient_list">Lista de pacientes</string>
     <string name="patient_name">Nombre del paciente</string>
-    <string name="dni">DNI:</string>
     <string name="birthday">Fecha de nacimiento</string>
     <string name="add_patient">Añadir paciente</string>
     <string name="surname">Apellidos</string>
+    <string name="sex">Sexo</string>
+    <string name="sex_prompt">Elige el sexo</string>
+    <string-array name ="sex_arrays">Elige el sexo:
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>No binario</item>
+    </string-array>
 </resources>
