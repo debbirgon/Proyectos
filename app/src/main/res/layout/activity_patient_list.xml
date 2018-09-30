@@ -9,14 +9,15 @@
     tools:context="com.example.windows.medispenser.ui.PatientListActivity">
 
     <TextView
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:fontFamily="@font/chumbly"
+        android:capitalize="none"
+        android:fontFamily="@font/Science_Fair"
         android:gravity="center"
         android:text="@string/patient_list"
         android:textColor="@android:color/black"
-        android:textSize="60dp" />
+        android:textSize="50dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,8 +32,7 @@
             android:layout_height="225dp"
             android:layout_gravity="center"
             android:layout_weight="1.25"
-            android:orientation="vertical">
-        </android.support.v7.widget.RecyclerView>
+            android:orientation="vertical"></android.support.v7.widget.RecyclerView>
 
     </LinearLayout>
 
@@ -50,7 +50,7 @@
             android:layout_height="35dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rectangleGrey"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/Comfortaa_Bold"
             android:text="@string/add_patient"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:background="@drawable/rectangleGrey"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/Comfortaa_Bold"
             android:text="@string/exit"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />

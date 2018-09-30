@@ -10,10 +10,10 @@
     tools:context="com.example.windows.medispenser.ui.LoginActivity">
 
     <TextView
-        android:layout_width="350dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
         android:layout_gravity="center"
-        android:fontFamily="@font/chumbly"
+        android:fontFamily="@font/Science_Fair"
         android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@android:color/black"
@@ -29,7 +29,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/Comfortaa_Bold"
             android:text="@string/user"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
@@ -40,16 +40,18 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             android:background="@drawable/rectangleWhite"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/Comfortaa_Bold"
+            android:hint="usuario o email"
             android:inputType="text"
             android:maxHeight="35dp"
             android:maxLines="1"
-            android:paddingVertical="4dp" />
+            android:paddingVertical="4dp"
+            android:textAlignment="center" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/Comfortaa_Bold"
             android:text="@string/pass"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
@@ -60,11 +62,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             android:background="@drawable/rectangleWhite"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/Comfortaa_Bold"
+            android:hint="contraseña"
             android:inputType="textPassword"
             android:maxHeight="35dp"
             android:maxLines="1"
-            android:paddingVertical="4dp" />
+            android:paddingVertical="4dp"
+            android:textAlignment="center" />
 
     </LinearLayout>
 
@@ -84,8 +88,9 @@
             android:layout_marginBottom="10dp"
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/rectangleGrey"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/Comfortaa_Bold"
             android:text="@string/access"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
 
@@ -96,8 +101,20 @@
             android:layout_marginBottom="10dp"
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/rectangleGrey"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/Comfortaa_Bold"
             android:text="@string/create_user"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btn_forgotten_password"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rectangleTransparent"
+            android:fontFamily="@font/Comfortaa_Bold"
+            android:text="@string/forgotten_password"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
 

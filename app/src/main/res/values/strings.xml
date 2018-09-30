@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">Medispenser</string>
+    <string name="app_name">MEDISPENSER</string>
     <string name="login">Login</string>
     <string name="user">Usuario</string>
     <string name="pass">Contraseña</string>
     <string name="create_user">Crear usuario</string>
     <string name="keep_session">Mantener la sesión iniciada</string>
     <string name="access">Acceder</string>
+    <string name="forgotten_password">Reestablecer la contraseña</string>
     <string name="user_pref">USER_PREF</string>
     <string name="pass_pref">PASS_PREF</string>
     <string name="must_create_user">Debe crear el usuario antes de acceder.</string>
@@ -51,8 +52,11 @@
     <string name="birthday">Fecha de nacimiento</string>
     <string name="add_patient">Añadir paciente</string>
     <string name="surname">Apellidos</string>
-    <string-array name ="gender">
-        <item>Hombre</item>
-        <item>Mujer</item>
+    <string name="sex">Sexo</string>
+    <string name="sex_prompt">Elige el sexo</string>
+    <string-array name ="sex_arrays">Elige el sexo:
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>No binario</item>
     </string-array>
 </resources>
