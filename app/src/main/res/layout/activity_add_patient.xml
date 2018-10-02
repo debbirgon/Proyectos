@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/rectangleWhite"
+            android:background="@drawable/rectangle_white"
             android:fontFamily="@font/Comfortaa_Bold"
             android:hint="nombre"
             android:inputType="text"
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/rectangleWhite"
+            android:background="@drawable/rectangle_white"
             android:fontFamily="@font/Comfortaa_Bold"
             android:hint="apellidos"
             android:inputType="text"
@@ -82,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/rectangleWhite"
+            android:background="@drawable/rectangle_white"
             android:fontFamily="@font/Comfortaa_Bold"
             android:hint="dd/mm/yyyy"
             android:maxHeight="35dp"
@@ -102,11 +102,11 @@
             android:id="@+id/spinner_sex"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:background="@drawable/rectangleWhite"
+            android:background="@drawable/rectangle_white"
             android:entries="@array/sex_arrays"
             android:fontFamily="@font/Comfortaa_Bold"
             android:layout="@string/sex_prompt"
-            android:popupBackground="@drawable/rectangleWhite"></ExpandableListView>
+            android:popupBackground="@drawable/rectangle_white"></ExpandableListView>
 
     </LinearLayout>
 
@@ -124,7 +124,7 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/rectangleGrey"
+            android:background="@drawable/rectangle_grey"
             android:fontFamily="@font/Comfortaa_Bold"
             android:text="@string/add"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"

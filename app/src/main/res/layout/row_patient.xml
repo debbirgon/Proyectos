@@ -10,7 +10,7 @@
         android:id="@+id/ll_patient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rectangleWhite"
+        android:background="@drawable/rectangle_white"
         android:orientation="horizontal"
         android:paddingBottom="4dp"
         android:paddingTop="4dp">
