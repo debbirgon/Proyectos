@@ -13,7 +13,7 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:capitalize="none"
-        android:fontFamily="@font/Science_Fair"
+        android:fontFamily="@font/science_fair"
         android:gravity="center"
         android:text="@string/patient_list"
         android:textColor="@android:color/black"
@@ -50,7 +50,7 @@
             android:layout_height="35dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rectangle_grey"
-            android:fontFamily="@font/Comfortaa_Bold"
+            android:fontFamily="@font/comfortaa_bold"
             android:text="@string/add_patient"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:background="@drawable/rectangle_grey"
-            android:fontFamily="@font/Comfortaa_Bold"
+            android:fontFamily="@font/comfortaa_bold"
             android:text="@string/exit"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />

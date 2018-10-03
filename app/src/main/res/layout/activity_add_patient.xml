@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:fontFamily="@font/Science_Fair"
+        android:fontFamily="@font/science_fair"
         android:gravity="center"
         android:text="@string/add_patient"
         android:textColor="@android:color/black"
@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:fontFamily="@font/Comfortaa_Bold"
+            android:fontFamily="@font/comfortaa_bold"
             android:text="@string/name"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:background="@drawable/rectangle_white"
-            android:fontFamily="@font/Comfortaa_Bold"
+            android:fontFamily="@font/comfortaa_bold"
             android:hint="nombre"
             android:inputType="text"
             android:maxHeight="35dp"
@@ -50,7 +50,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:fontFamily="@font/Comfortaa_Bold"
+            android:fontFamily="@font/comfortaa_bold"
             android:text="@string/surname"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:background="@drawable/rectangle_white"
-            android:fontFamily="@font/Comfortaa_Bold"
+            android:fontFamily="@font/comfortaa_bold"
             android:hint="apellidos"
             android:inputType="text"
             android:maxHeight="35dp"
@@ -72,7 +72,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:fontFamily="@font/Comfortaa_Bold"
+            android:fontFamily="@font/comfortaa_bold"
             android:text="@string/birthday"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:background="@drawable/rectangle_white"
-            android:fontFamily="@font/Comfortaa_Bold"
+            android:fontFamily="@font/comfortaa_bold"
             android:hint="dd/mm/yyyy"
             android:maxHeight="35dp"
             android:maxLines="1"
@@ -93,7 +93,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:fontFamily="@font/Comfortaa_Bold"
+            android:fontFamily="@font/comfortaa_bold"
             android:text="@string/sex"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
@@ -104,7 +104,7 @@
             android:layout_height="35dp"
             android:background="@drawable/rectangle_white"
             android:entries="@array/sex_arrays"
-            android:fontFamily="@font/Comfortaa_Bold"
+            android:fontFamily="@font/comfortaa_bold"
             android:layout="@string/sex_prompt"
             android:popupBackground="@drawable/rectangle_white"></ExpandableListView>
 
@@ -125,7 +125,7 @@
             android:layout_height="35dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rectangle_grey"
-            android:fontFamily="@font/Comfortaa_Bold"
+            android:fontFamily="@font/comfortaa_bold"
             android:text="@string/add"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />

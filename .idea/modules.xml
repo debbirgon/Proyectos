@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Medispenser.iml" filepath="$PROJECT_DIR$/Medispenser.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Proyectos.iml" filepath="$PROJECT_DIR$/Proyectos.iml" />
+      <module fileurl="file://C:\Users\windows\Desktop\2017-2018\1er Cuatrimestre\GSTI\Medispenser\Proyectos.iml" filepath="C:\Users\windows\Desktop\2017-2018\1er Cuatrimestre\GSTI\Medispenser\Proyectos.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
