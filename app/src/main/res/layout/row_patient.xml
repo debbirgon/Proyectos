@@ -1,50 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
+        android:id="@+id/ll_patient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ll_patient"
+        android:background="@drawable/rectangle_white"
+        android:orientation="horizontal"
         android:paddingBottom="4dp"
-        android:paddingTop="4dp"
-        android:orientation="horizontal">
+        android:paddingTop="4dp">
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/patient_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/patient_name"
+                android:fontFamily="@font/Comfortaa_Bold"
                 android:text="@string/patient_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorPrimaryDark"
-                android:textStyle="bold"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+                android:textStyle="bold" />
 
 
             <TextView
+                android:id="@+id/birthday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/birthday"
+                android:fontFamily="@font/Comfortaa_Bold"
                 android:text="@string/birthday"
-                android:textColor="@color/colorPrimaryDark"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/Comfortaa_Bold"
+                android:text="@string/sex"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.75"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_icon_profile_80px"/>
+            android:layout_weight="0.75"
+            app:srcCompat="@drawable/ic_icon_profile_80px" />
 
     </LinearLayout>
 
