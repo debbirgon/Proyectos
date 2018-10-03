@@ -63,7 +63,7 @@ public class AddMedActivity extends AppCompatActivity {
                 int amount = 0;
 
                 if(name==null || name.equals("") || amountString == null || amountString.equals("")){
-                    Toast.makeText(getApplicationContext(), getString(R.string.register_fail)
+                    Toast.makeText(getApplicationContext(), getString(R.string.must_fill)
                             ,Toast.LENGTH_SHORT).show();
                 }else{
                     amount = valueOf(amountString);

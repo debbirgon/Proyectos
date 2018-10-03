@@ -11,7 +11,7 @@
     <string name="must_create_user">Debe crear el usuario antes de acceder.</string>
     <string name="login_ok">Ha iniciado sesión correctamente</string>
     <string name="login_fail">Campo(s) usuario y/o contraseña incorrecto(s)</string>
-    <string name="register_fail">Debe rellenar ambos campos</string>
+    <string name="must_fill">Debe rellenar todos los campos</string>
     <string name="register_ok">Registro realizado con éxito</string>
     <string name="level_1">Nivel 1</string>
     <string name="level_2">Nivel 2</string>
@@ -52,4 +52,5 @@
     <string name="birthday">Fecha de nacimiento</string>
     <string name="add_patient">Añadir paciente</string>
     <string name="surname">Apellidos</string>
+    <string name="sex">Sexo</string>
 </resources>

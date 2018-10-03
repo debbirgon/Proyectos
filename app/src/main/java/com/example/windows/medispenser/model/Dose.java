@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by windows on 21/09/2018.
  */
 
-public class Dosis {
+public class Dose {
 
     @SerializedName("ID")
     private Integer id;
@@ -14,21 +14,16 @@ public class Dosis {
     private String hora_inicio;
     @SerializedName("VECES_POR_DIA")
     private Integer veces_dia;
+    @SerializedName("nombre_medicamento")
+    private String nombre_medicamento;
+    @SerializedName("ID_MEDICAMENTO")
+    private Integer id_medicamento;
     @SerializedName("ID_TRATAMIENTO")
     private Integer id_tratamiento;
 
-    public Dosis() {
+    public Dose() {
     }
 
-    @Override
-    public String toString() {
-        return "Dosis{" +
-                "id=" + id +
-                ", hora_inicio='" + hora_inicio + '\'' +
-                ", veces_dia=" + veces_dia +
-                ", id_tratamiento=" + id_tratamiento +
-                '}';
-    }
 
     public Integer getId() {
         return id;
@@ -52,6 +47,22 @@ public class Dosis {
 
     public void setVeces_dia(Integer veces_dia) {
         this.veces_dia = veces_dia;
+    }
+
+    public String getNombre_medicamento() {
+        return nombre_medicamento;
+    }
+
+    public void setNombre_medicamento(String nombre_medicamento) {
+        this.nombre_medicamento = nombre_medicamento;
+    }
+
+    public Integer getId_medicamento() {
+        return id_medicamento;
+    }
+
+    public void setId_medicamento(Integer id_medicamento) {
+        this.id_medicamento = id_medicamento;
     }
 
     public Integer getId_tratamiento() {

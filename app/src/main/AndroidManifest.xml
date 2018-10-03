@@ -23,7 +23,8 @@
         <activity android:name=".ui.AddMedActivity" />
         <activity android:name=".ui.AddTakeActivity" />
         <activity android:name=".ui.PatientListActivity" />
-        <activity android:name=".ui.AddPatientActivity"></activity>
+        <activity android:name=".ui.AddPatientActivity" />
+        <activity android:name=".ui.MenuActivity"></activity>
     </application>
 
 </manifest>

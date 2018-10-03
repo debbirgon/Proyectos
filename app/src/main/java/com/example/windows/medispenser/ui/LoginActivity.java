@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                 String pass = et_pass.getText().toString();
                 if((user == null || user.equals(""))
                         || (pass == null || pass.equals(""))){
-                    Toast.makeText(getApplicationContext(),getString(R.string.register_fail),
+                    Toast.makeText(getApplicationContext(),getString(R.string.must_fill),
                             Toast.LENGTH_SHORT).show();
                 }else{
                     sharedPreferences.edit().putString(getString(R.string.user_pref), user).apply();

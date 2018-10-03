@@ -1,7 +1,6 @@
 package com.example.windows.medispenser.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,9 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.windows.medispenser.R;
-import com.example.windows.medispenser.model.Patient;
-import com.example.windows.medispenser.ui.SpdActivity;
-import com.example.windows.medispenser.util.Constants;
+import com.example.windows.medispenser.model.Person;
 
 import java.util.List;
 
@@ -23,10 +20,10 @@ import java.util.List;
 
 public class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.PatientListViewHolder> {
 
-    private List<Patient> patientList;
+    private List<Person> patientList;
     private Context mContext;
 
-    public PatientListAdapter(List<Patient> patientList, Context mContext) {
+    public PatientListAdapter(List<Person> patientList, Context mContext) {
         this.patientList = patientList;
         this.mContext = mContext;
     }
@@ -41,7 +38,7 @@ public class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull PatientListViewHolder holder, final int position) {
-        final Patient patient = patientList.get(position);
+        final Person patient = patientList.get(position);
 
         String birthday = holder.birthday.getText().toString()+ ":\n" + patient.getBirthday();
 
@@ -51,9 +48,9 @@ public class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.
         holder.ll_patient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, SpdActivity.class);
-                intent.putExtra(Constants.PATIENT,patient);
-                mContext.startActivity(intent);
+//                Intent intent = new Intent(mContext, MenuActivity.class);
+//                intent.putExtra(Constants.PATIENT,patient);
+//                mContext.startActivity(intent);
                 
             }
         });

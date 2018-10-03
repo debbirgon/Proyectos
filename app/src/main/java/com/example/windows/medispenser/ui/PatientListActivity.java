@@ -11,7 +11,8 @@ import android.widget.Button;
 
 import com.example.windows.medispenser.R;
 import com.example.windows.medispenser.adapter.PatientListAdapter;
-import com.example.windows.medispenser.model.Patient;
+import com.example.windows.medispenser.model.Person;
+import com.example.windows.medispenser.model.Sexo;
 import com.example.windows.medispenser.util.Constants;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class PatientListActivity extends AppCompatActivity {
 
     private RecyclerView rv_patient_list;
     private PatientListAdapter patientListAdapter;
-    private List<Patient> patientList;
+    private List<Person> patientList;
     private Button btn_add_patient;
     private Button btn_exit;
     private SharedPreferences sharedPreferences;
@@ -40,8 +41,8 @@ public class PatientListActivity extends AppCompatActivity {
         patientList = new ArrayList<>();
 
         for (int i = 0; i < 3; i++) {
-            patientList.add(new Patient("Paciente " + i, "Apellidos "+i, i,
-                    i + "" + i + "/" + i + "" + i + "/" + i + "" + i + "" + i + "" + i));
+            patientList.add(new Person("Paciente " + i, "Apellidos "+i,
+                    i + "" + i + "/" + i + "" + i + "/" + i + "" + i + "" + i + "" + i, Sexo.HOMBRE));
         }
 
 
