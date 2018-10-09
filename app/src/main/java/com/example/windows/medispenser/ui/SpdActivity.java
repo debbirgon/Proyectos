@@ -13,11 +13,9 @@ import com.example.windows.medispenser.util.Constants;
 
 public class SpdActivity extends AppCompatActivity {
 
-    TextView user_name;
     TextView level_1;
     TextView level_2;
     TextView level_3;
-    Button btn_exit;
     SharedPreferences sharedPreferences;
 
 
@@ -27,20 +25,12 @@ public class SpdActivity extends AppCompatActivity {
         setContentView(R.layout.activity_spd);
 
 
-        user_name = findViewById(R.id.patient_name);
         level_1 = findViewById(R.id.level_1);
         level_2 = findViewById(R.id.level_2);
         level_3 = findViewById(R.id.level_3);
-        btn_exit = findViewById(R.id.btn_exit);
         sharedPreferences
                 = getApplicationContext()
                 .getSharedPreferences(Constants.SHARED_PREF, MODE_PRIVATE);
-
-        String userNameText = getString(R.string.user_name)+" "+
-                sharedPreferences.getString(getString(R.string.user_pref),"");
-
-        user_name.setText(userNameText);
-
 
         level_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,11 +57,5 @@ public class SpdActivity extends AppCompatActivity {
             }
         });
 
-        btn_exit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
     }
 }

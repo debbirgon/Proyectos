@@ -137,6 +137,7 @@ public class AddPatientActivity extends AppCompatActivity {
 
                             if(response.code()==200){
                                 startActivity(new Intent(getApplicationContext(), PatientListActivity.class));
+                                finish();
                             }else{
                                 Toast.makeText(getApplicationContext(),"Conflict",
                                         Toast.LENGTH_SHORT).show();
@@ -149,6 +150,7 @@ public class AddPatientActivity extends AppCompatActivity {
                                     .equals("java.lang.IllegalStateException: " +
                                             "Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $")){
                                 startActivity(new Intent(getApplicationContext(),PatientListActivity.class));
+                                finish();
                             }
 
                         }
@@ -162,5 +164,6 @@ public class AddPatientActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         startActivity(new Intent(this, PatientListActivity.class));
+        finish();
     }
 }

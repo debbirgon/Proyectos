@@ -60,5 +60,9 @@
     <string name="patient_data">Datos del paciente:</string>
     <string name="treatments">Tratamientos</string>
     <string name="spd">Dispensador</string>
+    <string name="meds">Medicamentos</string>
+    <string name="med">Medicamento</string>
+    <string name="add_treatment">Añadir tratamiento</string>
+    <string name="name_treatment">Nombre del tratamiento</string>
 
 </resources>

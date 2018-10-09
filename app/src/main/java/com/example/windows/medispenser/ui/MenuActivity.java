@@ -35,7 +35,7 @@ public class MenuActivity extends AppCompatActivity {
         btn_treatments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goTreatment = new Intent(getApplicationContext(), TreatmentActivity.class);
+                Intent goTreatment = new Intent(getApplicationContext(), TreatmentListActivity.class);
                 goTreatment.putExtra(Constants.PATIENT,patient);
                 startActivity(goTreatment);
             }

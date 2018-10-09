@@ -85,6 +85,7 @@ public class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, MenuActivity.class);
                 intent.putExtra(Constants.PATIENT,patient);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
                 
             }
