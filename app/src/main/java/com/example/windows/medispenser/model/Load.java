@@ -2,22 +2,24 @@ package com.example.windows.medispenser.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by windows on 02/10/2018.
  */
 
-public class Load {
-    @SerializedName("ID")
+public class Load implements Serializable{
+    @SerializedName(value = "id", alternate = "ID")
     private Integer id;
-    @SerializedName("ID_SPD")
+    @SerializedName(value = "id_spd", alternate = "ID_SPD")
     private Integer id_spd;
-    @SerializedName("ID_MEDICAMENTO")
+    @SerializedName(value = "id_medicamento", alternate = "ID_MEDICAMENTO")
     private Integer id_med;
-    @SerializedName("ID_DEPENDIENTE")
+    @SerializedName(value = "id_dependiente", alternate = "ID_DEPENDIENTE")
     private Integer id_patient;
-    @SerializedName("CANTIDAD")
+    @SerializedName(value = "cantidad", alternate = "CANTIDAD")
     private Integer quantity;
-    @SerializedName("NIVEL")
+    @SerializedName(value = "nivel", alternate = "NIVEL")
     private Integer level;
 
     public Integer getId() {

@@ -2,11 +2,13 @@ package com.example.windows.medispenser.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by windows on 02/10/2018.
  */
 
-public class Med {
+public class Med implements Serializable{
 
     @SerializedName("ID")
     private Integer id;

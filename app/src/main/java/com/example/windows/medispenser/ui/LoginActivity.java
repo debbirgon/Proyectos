@@ -65,18 +65,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_createUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String user = et_user.getText().toString();
-                String pass = et_pass.getText().toString();
-                if((user == null || user.equals(""))
-                        || (pass == null || pass.equals(""))){
-                    Toast.makeText(getApplicationContext(),getString(R.string.must_fill),
-                            Toast.LENGTH_SHORT).show();
-                }else{
-                    sharedPreferences.edit().putString(getString(R.string.user_pref), user).apply();
-                    sharedPreferences.edit().putString(getString(R.string.pass_pref), pass).apply();
-                    Toast.makeText(getApplicationContext(), getString(R.string.register_ok),
-                            Toast.LENGTH_SHORT).show();
-                }
+                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
 
             }
         });

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_transparent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -10,7 +11,6 @@
         android:id="@+id/ll_patient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rectangle_white"
         android:orientation="horizontal"
         android:paddingBottom="4dp"
         android:paddingTop="4dp">
@@ -52,12 +52,6 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0.75"
-            app:srcCompat="@drawable/ic_icon_profile_80px" />
 
     </LinearLayout>
 

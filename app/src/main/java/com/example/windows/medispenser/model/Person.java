@@ -1,7 +1,5 @@
 package com.example.windows.medispenser.model;
 
-import android.support.annotation.Nullable;
-
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
@@ -11,29 +9,26 @@ import java.io.Serializable;
  */
 
 public class Person implements Serializable {
-    @SerializedName("ID")
-    private Integer id;
-    @SerializedName("NOMBRE")
+    @SerializedName(value = "ID_PERSONA"/*, alternate = "ID"*/)
+    private Integer id_person;
+    @SerializedName(value = "nombre", alternate = "NOMBRE")
     private String name;
-    @SerializedName("APELLIDOS")
+    @SerializedName(value = "apellidos", alternate = "APELLIDOS")
     private String surname;
-    @SerializedName("FECHA_NACIMIENTO")
+    @SerializedName(value = "fecha_nacimiento", alternate = "FECHA_NACIMIENTO")
     private String birthday;
-    @SerializedName("SEXO")
-    private Sexo sex;
-    @Nullable
-    @SerializedName("id_cuidador")
-    private Integer id_cuidador;
+    @SerializedName(value = "sexo", alternate = "SEXO")
+    private Sex sex;
 
-    public Person(String name, String surname, Integer id, String birthday, Sexo sex) {
+    public Person(String name, String surname, Integer id_person, String birthday, Sex sex) {
         this.name = name;
         this.surname = surname;
-        this.id = id;
+        this.id_person = id_person;
         this.birthday = birthday;
         this.sex = sex;
     }
 
-    public Person(String name, String surname, String birthday, Sexo sex) {
+    public Person(String name, String surname, String birthday, Sex sex) {
         this.name = name;
         this.surname = surname;
         this.birthday = birthday;
@@ -63,12 +58,12 @@ public class Person implements Serializable {
         this.surname = surname;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getId_person() {
+        return id_person;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId_person(Integer id_person) {
+        this.id_person = id_person;
     }
 
     public String getBirthday() {
@@ -79,11 +74,11 @@ public class Person implements Serializable {
         this.birthday = birthday;
     }
 
-    public Sexo getSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(Sexo sex) {
+    public void setSex(Sex sex) {
         this.sex = sex;
     }
 }

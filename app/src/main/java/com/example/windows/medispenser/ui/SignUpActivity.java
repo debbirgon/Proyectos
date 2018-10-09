@@ -18,11 +18,12 @@ import android.widget.Toast;
 import com.example.windows.medispenser.R;
 import com.example.windows.medispenser.api.ApiClient;
 import com.example.windows.medispenser.api.PersonService;
-import com.example.windows.medispenser.model.Patient;
+import com.example.windows.medispenser.model.Carer;
 import com.example.windows.medispenser.model.Sex;
 
-import org.apache.commons.lang3.RandomStringUtils;
-
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -31,27 +32,32 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AddPatientActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
-    EditText et_patient_name;
-    EditText et_patient_surname;
-    EditText et_patient_birthday;
-    Button btn_addPatient;
-    Spinner spinner_sex;
-    Patient patient;
+    EditText et_user_signUp;
+    EditText et_pass_signUp;
+    EditText et_name_signUp;
+    EditText et_surname_signUp;
+    EditText et_birthday_signUp;
+    Button btn_signUp;
+    Spinner spinner_sex_signUp;
+    Carer carer;
     DatePickerDialog.OnDateSetListener myDateSetListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_patient);
+        setContentView(R.layout.activity_sign_up);
 
-        et_patient_name = findViewById(R.id.et_patient_name);
-        et_patient_surname = findViewById(R.id.et_patient_surname);
-        et_patient_birthday = findViewById(R.id.et_patient_birthday);
-        btn_addPatient = findViewById(R.id.btn_addPatient);
-        spinner_sex = findViewById(R.id.spinner_sex);
-        patient = new Patient();
+        et_user_signUp = findViewById(R.id.et_user_signUp);
+        et_pass_signUp = findViewById(R.id.et_pass_signUp);
+        et_name_signUp = findViewById(R.id.et_name_signUp);
+        et_surname_signUp = findViewById(R.id.et_surname_signUp);
+        et_birthday_signUp = findViewById(R.id.et_birthday_signUp);
+        btn_signUp = findViewById(R.id.btn_signUp);
+        spinner_sex_signUp = findViewById(R.id.spinner_sex_signUp);
+        carer = new Carer();
 
         final List<String> listSex = new ArrayList<>();
         listSex.add(getString(R.string.select));
@@ -59,15 +65,15 @@ public class AddPatientActivity extends AppCompatActivity {
         listSex.add("MUJER");
 
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this,android.R.layout
-        .simple_spinner_dropdown_item,listSex);
-        spinner_sex.setAdapter(spinnerAdapter);
+                .simple_spinner_dropdown_item,listSex);
+        spinner_sex_signUp.setAdapter(spinnerAdapter);
 
-        spinner_sex.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner_sex_signUp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
                 if(position!=0) {
-                    patient.setSex(Sex.valueOf(listSex.get(position)));
+                    carer.setSex(Sex.valueOf(listSex.get(position)));
                 }
             }
 
@@ -77,7 +83,7 @@ public class AddPatientActivity extends AppCompatActivity {
             }
         });
 
-        et_patient_birthday.setOnClickListener(new View.OnClickListener() {
+        et_birthday_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Calendar calendar = Calendar.getInstance();
@@ -85,7 +91,7 @@ public class AddPatientActivity extends AppCompatActivity {
                 int month = calendar.get(Calendar.MONTH);
                 int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-                DatePickerDialog dialog = new DatePickerDialog(AddPatientActivity.this,
+                DatePickerDialog dialog = new DatePickerDialog(SignUpActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog_MinWidth
                         ,myDateSetListener,year,month,day);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -111,44 +117,46 @@ public class AddPatientActivity extends AppCompatActivity {
                     stringDay = String.valueOf(day);
                 }
                 String birthday = year+"-"+stringMonth+"-"+stringDay;
-                et_patient_birthday.setText(birthday);
+                et_birthday_signUp.setText(birthday);
 
             }
         };
 
-        btn_addPatient.setOnClickListener(new View.OnClickListener() {
+        btn_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                patient.setName(et_patient_name.getText().toString());
-                patient.setSurname(et_patient_surname.getText().toString());
-                patient.setBirthday(et_patient_birthday.getText().toString());
-                patient.setId_carer(3);
-                patient.setAlias(RandomStringUtils.random(5,true,false));
+                carer.setName(et_name_signUp.getText().toString());
+                carer.setSurname(et_surname_signUp.getText().toString());
+                carer.setBirthday(et_birthday_signUp.getText().toString());
+                carer.setUsername(et_user_signUp.getText().toString());
+                setPasswordHashed(et_pass_signUp.getText().toString());
 
-                if(patient.getSex()==null || patient.getName().equals("")
-                        || patient.getSurname().equals("")|| patient.getBirthday().equals("")){
+                if(carer.getSex()==null || carer.getUsername() == null || carer.getPassword()== null
+                ||carer.getName().equals("") || carer.getSurname().equals("")
+                        || carer.getBirthday().equals("")){
                     Toast.makeText(getApplicationContext(),getString(R.string.must_fill),
                             Toast.LENGTH_SHORT).show();
                 }else{
                     PersonService personService = ApiClient.getApiClient().create(PersonService.class);
-                    personService.postPatient(patient).enqueue(new Callback<Patient>() {
+                    personService.postCarer(carer).enqueue(new Callback<Carer>() {
                         @Override
-                        public void onResponse(Call<Patient> call, Response<Patient> response) {
+                        public void onResponse(Call<Carer> call, Response<Carer> response) {
 
                             if(response.code()==200){
-                                startActivity(new Intent(getApplicationContext(), PatientListActivity.class));
-                            }else{
-                                Toast.makeText(getApplicationContext(),"Conflict",
-                                        Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                Toast.makeText(getApplicationContext(),getString(R.string.register_ok),
+                                        Toast.LENGTH_LONG).show();
                             }
                         }
 
                         @Override
-                        public void onFailure(Call<Patient> call, Throwable t) {
+                        public void onFailure(Call<Carer> call, Throwable t) {
                             if(t.getMessage()
                                     .equals("java.lang.IllegalStateException: " +
                                             "Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $")){
-                                startActivity(new Intent(getApplicationContext(),PatientListActivity.class));
+                                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                Toast.makeText(getApplicationContext(),getString(R.string.register_ok),
+                                        Toast.LENGTH_LONG).show();
                             }
 
                         }
@@ -159,8 +167,23 @@ public class AddPatientActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        startActivity(new Intent(this, PatientListActivity.class));
+    private void setPasswordHashed(String pass) {
+        MessageDigest mDigest = null;
+        try {
+            mDigest = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        byte[] encodedHash = mDigest.digest(pass.getBytes(StandardCharsets.UTF_8));
+
+        StringBuffer hexString = new StringBuffer();
+        for (int i = 0; i < encodedHash.length; i++) {
+            String hex = Integer.toHexString(0xff & encodedHash[i]);
+            if(hex.length() == 1) hexString.append('0');
+            hexString.append(hex);
+        }
+
+        carer.setPassword(hexString.toString());
+
     }
 }

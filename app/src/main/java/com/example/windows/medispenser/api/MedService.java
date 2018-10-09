@@ -2,6 +2,8 @@ package com.example.windows.medispenser.api;
 
 import com.example.windows.medispenser.model.Med;
 
+import java.util.List;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -22,6 +24,9 @@ public interface MedService {
 
     @GET("medicamentos/carga")
     Call<Med> getMedByLoad(@Query("id") int id_load);
+
+    @GET("medicamentos/dependiente")
+    Call<List<Med>> getListMed(@Query("id") int id_patient);
 
     @POST("medicamentos")
     Call<Med> postMed(@Body Med med);

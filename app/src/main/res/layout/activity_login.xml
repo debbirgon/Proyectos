@@ -40,7 +40,7 @@
             android:layout_marginBottom="30dp"
             android:background="@drawable/rectangle_white"
             android:fontFamily="@font/comfortaa_bold"
-            android:hint="usuario o email"
+            android:hint="@string/user"
             android:inputType="text"
             android:maxHeight="35dp"
             android:maxLines="1"
@@ -106,7 +106,7 @@
             android:textColor="@android:color/black" />
 
         <!--<Button-->
-            <!--android:id="@+id/btn_forgotten_password"-->
+            <!--andridd:idid@+id/btn_forgotten_password"-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="35dp"-->
             <!--android:layout_marginHorizontal="10dp"-->

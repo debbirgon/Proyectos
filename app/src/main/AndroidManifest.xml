@@ -24,7 +24,9 @@
         <activity android:name=".ui.AddTakeActivity" />
         <activity android:name=".ui.PatientListActivity" />
         <activity android:name=".ui.AddPatientActivity" />
-        <activity android:name=".ui.MenuActivity"></activity>
+        <activity android:name=".ui.MenuActivity" />
+        <activity android:name=".ui.SignUpActivity" />
+        <activity android:name=".ui.TreatmentActivity"></activity>
     </application>
 
 </manifest>

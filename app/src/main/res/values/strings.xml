@@ -12,8 +12,8 @@
     <string name="must_create_user">Debe crear el usuario antes de acceder.</string>
     <string name="login_ok">Ha iniciado sesión correctamente</string>
     <string name="login_fail">Campo(s) usuario y/o contraseña incorrecto(s)</string>
-    <string name="register_fail">Debe rellenar ambos campos</string>
-    <string name="register_ok">Registro realizado con éxito</string>
+    <string name="must_fill">Debe rellenar todos los campos</string>
+    <string name="register_ok">Registro realizado con éxito. Por favor, inicie sesión</string>
     <string name="level_1">Nivel 1</string>
     <string name="level_2">Nivel 2</string>
     <string name="level_3">Nivel 3</string>
@@ -54,9 +54,11 @@
     <string name="surname">Apellidos</string>
     <string name="sex">Sexo</string>
     <string name="sex_prompt">Elige el sexo</string>
-    <string-array name ="sex_arrays">Elige el sexo:
-        <item>Masculino</item>
-        <item>Femenino</item>
-        <item>No binario</item>
-    </string-array>
+    <string name="signUp">Registro</string>
+    <string name="select">SELECCIONAR</string>
+    <string name="menu">Menú</string>
+    <string name="patient_data">Datos del paciente:</string>
+    <string name="treatments">Tratamientos</string>
+    <string name="spd">Dispensador</string>
+
 </resources>

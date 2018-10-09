@@ -40,8 +40,8 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/rectangle_white"
             android:fontFamily="@font/comfortaa_bold"
-            android:hint="nombre"
-            android:inputType="text"
+            android:hint="@string/name"
+            android:inputType="textCapWords"
             android:maxHeight="35dp"
             android:maxLines="1"
             android:paddingVertical="4dp"
@@ -62,8 +62,8 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/rectangle_white"
             android:fontFamily="@font/comfortaa_bold"
-            android:hint="apellidos"
-            android:inputType="text"
+            android:hint="@string/surname"
+            android:inputType="textCapWords"
             android:maxHeight="35dp"
             android:maxLines="1"
             android:paddingVertical="4dp"
@@ -84,8 +84,9 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/rectangle_white"
             android:fontFamily="@font/comfortaa_bold"
-            android:hint="dd/mm/yyyy"
+            android:hint="yyyy-mm-dd"
             android:maxHeight="35dp"
+            android:focusable="false"
             android:maxLines="1"
             android:paddingVertical="4dp"
             android:textAlignment="center" />
@@ -98,21 +99,26 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
 
-        <ExpandableListView
-            android:id="@+id/spinner_sex"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="34dp"
             android:background="@drawable/rectangle_white"
-            android:entries="@array/sex_arrays"
-            android:fontFamily="@font/comfortaa_bold"
-            android:layout="@string/sex_prompt"
-            android:popupBackground="@drawable/rectangle_white"></ExpandableListView>
+            android:paddingVertical="4dp">
+            <Spinner
+                android:id="@+id/spinner_sex"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginHorizontal="26dp"
         android:layout_marginVertical="20dp"
