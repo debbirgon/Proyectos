@@ -1,43 +1,54 @@
 package com.example.windows.medispenser.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
- * Created by windows on 19/09/2018.
+ * Created by windows on 03/10/2018.
  */
 
-public class Patient implements Serializable {
-    private String name;
-    private String dni;
-    private String birthday;
+public class Patient extends Person implements Serializable{
 
-    public Patient(String name, String dni, String birthday) {
-        this.name = name;
-        this.dni = dni;
-        this.birthday = birthday;
+    @SerializedName(value = "id", alternate = "ID")
+    private Integer id_patient;
+    @SerializedName(value = "id_cuidador", alternate = "ID_CUIDADOR")
+    private Integer id_carer;
+    @SerializedName(value = "alias", alternate = "ALIAS")
+    private String alias;
+
+
+    public Patient(){}
+
+    public Integer getId_patient() {
+        return id_patient;
     }
 
-    public String getName() {
-        return name;
+    public void setId_patient(Integer id_patient) {
+        this.id_patient = id_patient;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Integer getId_carer() {
+        return id_carer;
     }
 
-    public String getDni() {
-        return dni;
+    public void setId_carer(Integer id_carer) {
+        this.id_carer = id_carer;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public String getAlias() {
+        return alias;
     }
 
-    public String getBirthday() {
-        return birthday;
+    public void setAlias(String alias) {
+        this.alias = alias;
     }
 
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
+    @Override
+    public String toString() {
+        return "Nombre: " +
+                getName() + " " + getSurname()+
+                "\nFecha de nacimiento: " + getBirthday() +
+                "\nSexo: " + getSex();
     }
 }

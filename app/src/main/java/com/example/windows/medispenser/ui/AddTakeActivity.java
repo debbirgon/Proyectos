@@ -41,8 +41,7 @@ public class AddTakeActivity extends AppCompatActivity {
         et_minute = findViewById(R.id.et_minute);
         btn_add_take = findViewById(R.id.btn_add_take);
         deleteTakes = findViewById(R.id.deleteTakes);
-        sharedPreferences = getApplicationContext().getSharedPreferences(getString(
-                R.string.shared_pref),MODE_PRIVATE);
+        sharedPreferences = getApplicationContext().getSharedPreferences(Constants.SHARED_PREF,MODE_PRIVATE);
         takes = new ArrayList<>();
 
         if(hasTakes){
@@ -84,7 +83,7 @@ public class AddTakeActivity extends AppCompatActivity {
                 String minute = et_minute.getText().toString();
 
                 if(hour==null || hour.equals("") || minute == null || minute.equals("")){
-                    Toast.makeText(getApplicationContext(), getString(R.string.register_fail)
+                    Toast.makeText(getApplicationContext(), getString(R.string.must_fill)
                             ,Toast.LENGTH_LONG).show();
                 }else if(hour.length()!=2 || minute.length() != 2){
                     Toast.makeText(getApplicationContext(), getString(R.string.wrong_size)
