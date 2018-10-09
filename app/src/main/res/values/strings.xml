@@ -64,5 +64,7 @@
     <string name="med">Medicamento</string>
     <string name="add_treatment">Añadir tratamiento</string>
     <string name="name_treatment">Nombre del tratamiento</string>
+    <string name="add_medication">Añadir Medicación</string>
+    <string name="delete_treatment">Eliminar tratamiento</string>
 
 </resources>
