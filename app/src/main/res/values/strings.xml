@@ -55,7 +55,7 @@
     <string name="sex">Sexo</string>
     <string name="sex_prompt">Elige el sexo</string>
     <string name="signUp">Registro</string>
-    <string name="select">SELECCIONAR</string>
+    <string name="select">Seleccionar</string>
     <string name="menu">Menú</string>
     <string name="patient_data">Datos del paciente:</string>
     <string name="treatments">Tratamientos</string>
