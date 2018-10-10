@@ -133,7 +133,7 @@
 	        android:layout_marginBottom="5dp"
 	        android:background="@drawable/rectangle_white"
 	        android:fontFamily="@font/comfortaa_bold"
-	        android:hint="@string/birthday"
+	        android:hint="@string/date_format"
 	        android:inputType="text"
 	        android:maxHeight="35dp"
 	        android:maxLines="1"
