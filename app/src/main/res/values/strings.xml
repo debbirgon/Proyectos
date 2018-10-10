@@ -68,5 +68,6 @@
     <string name="delete_treatment">Eliminar tratamiento</string>
     <string name="times_day">Veces al día</string>
     <string name="init_hour">Hora de inicio</string>
+    <string name="date_format">yyyy-mm-dd</string>
 
 </resources>
