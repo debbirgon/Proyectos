@@ -59,19 +59,46 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="@string/amount"
+            android:text="@string/init_hour"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/et_amount"
+            android:id="@+id/et_init_hour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:autofillHints=""
             android:background="@drawable/rectangle_white"
-            android:hint="@string/amount"
+            android:background="@drawable/rectangle_white"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:hint="@string/init_hour"
+            android:hint="@string/init_hour"
+            android:maxHeight="35dp"
+            android:maxLines="1"
+            android:paddingVertical="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingVertical="4dp"
+            android:text="@string/times_day"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/et_times_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/rectangle_white"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:hint="@string/times_day"
+            android:inputType="number"
             android:inputType="number"
             android:maxHeight="35dp"
             android:maxLines="1"
@@ -81,7 +108,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="fill_vertical"
         android:layout_marginHorizontal="26dp"
         android:layout_marginVertical="20dp"
@@ -89,31 +116,15 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/deleteMed"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/rectangle_grey"
-            android:fontFamily="sans-serif-condensed"
-            android:text="@string/deleteMed"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/black" />
-
-        <Button
             android:id="@+id/btn_addMed_and_amount"
             android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:layout_marginBottom="10dp"
+            android:layout_height="35dp"
             android:background="@drawable/rectangle_grey"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/add"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
 
-
     </LinearLayout>
-
-
-
 
 </LinearLayout>
