@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="24dp"
     android:background="@drawable/background"
     android:orientation="vertical"
     tools:context="com.example.windows.medispenser.ui.AddMedActivity">
 
     <TextView
-        android:layout_width="350dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_gravity="center"
         android:fontFamily="@font/science_fair"
         android:gravity="center"
@@ -20,7 +20,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="225dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
         android:layout_gravity="center"
         android:layout_marginHorizontal="40dp"
         android:orientation="vertical">
@@ -29,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="@string/name"
+            android:text="@string/name_of_med"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
 
@@ -49,20 +50,46 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="@string/amount"
+            android:text="@string/init_hour"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
 
         <EditText
-            android:id="@+id/et_amount"
+            android:id="@+id/et_init_hour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
+            android:hint="@string/init_hour"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_medium"
             android:background="@drawable/rectangle_white"
-            android:inputType="number"
             android:maxHeight="35dp"
+            android:maxLines="1"
+            android:paddingVertical="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/times_day"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/et_times_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="@string/times_day"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:background="@drawable/rectangle_white"
+            android:maxHeight="35dp"
+            android:inputType="number"
             android:maxLines="1"
             android:paddingVertical="4dp" />
 
@@ -70,25 +97,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="fill_vertical"
         android:layout_marginHorizontal="26dp"
         android:layout_marginVertical="20dp"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/deleteMed"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/rectangle_grey"
-            android:fontFamily="sans-serif-condensed"
-            android:text="@string/deleteMed"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/black" />
 
         <Button
-            android:id="@+id/btn_addMed_and_amount"
+            android:id="@+id/btn_addMedication"
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:layout_marginBottom="10dp"
