@@ -93,7 +93,7 @@
 	        android:background="@drawable/rectangle_white"
 	        android:focusable="false"
 	        android:fontFamily="@font/comfortaa_bold"
-	        android:hint="@string/date_format"
+	        android:hint="@string/birthday"
 	        android:inputType=""
 	        android:maxHeight="35dp"
 	        android:maxLines="1"

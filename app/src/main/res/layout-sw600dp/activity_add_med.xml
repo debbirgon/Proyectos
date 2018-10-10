@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="24dp"
+
     android:background="@drawable/background"
     android:orientation="vertical"
     tools:context="com.example.windows.medispenser.ui.AddMedActivity">
@@ -71,10 +71,8 @@
             android:layout_marginBottom="20dp"
             android:autofillHints=""
             android:background="@drawable/rectangle_white"
-            android:background="@drawable/rectangle_white"
             android:fontFamily="@font/roboto_medium"
             android:gravity="center"
-            android:hint="@string/init_hour"
             android:hint="@string/init_hour"
             android:maxHeight="35dp"
             android:maxLines="1"
@@ -99,7 +97,6 @@
             android:gravity="center"
             android:hint="@string/times_day"
             android:inputType="number"
-            android:inputType="number"
             android:maxHeight="35dp"
             android:maxLines="1"
             android:paddingVertical="4dp" />
@@ -116,7 +113,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_addMed_and_amount"
+            android:id="@+id/btn_addMedication"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:background="@drawable/rectangle_grey"
