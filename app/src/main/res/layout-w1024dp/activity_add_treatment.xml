@@ -69,6 +69,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rectangle_grey"
             android:fontFamily="@font/comfortaa_bold"
+            android:maxHeight="35dp"
             android:text="@string/add"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
