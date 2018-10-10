@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:animationCache="true"
-    android:background="@drawable/background"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_transparent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -25,31 +23,32 @@
 
             <TextView
                 android:id="@+id/patient_name"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/comfortaa_bold"
                 android:text="@string/patient_name"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@android:color/black" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/birthday"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/comfortaa_bold"
                 android:text="@string/birthday"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:id="@+id/sex"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/comfortaa_bold"
                 android:text="@string/sex"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 

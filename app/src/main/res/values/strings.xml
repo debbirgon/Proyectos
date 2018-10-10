@@ -19,7 +19,7 @@
     <string name="level_3">Nivel 3</string>
     <string name="exit">Cerrar sesión</string>
     <string name="user_name">Nombre de usuario:</string>
-    <string name="add_med">Añadir medicamento</string>
+    <string name="add_med">Añadir medicación</string>
     <string name="edit_med">Editar medicamento</string>
     <string name="add_take">Añadir toma</string>
     <string name="edit_takes">Editar tomas</string>
@@ -55,7 +55,7 @@
     <string name="sex">Sexo</string>
     <string name="sex_prompt">Elige el sexo</string>
     <string name="signUp">Registro</string>
-    <string name="select">SELECCIONAR</string>
+    <string name="select">Seleccionar</string>
     <string name="menu">Menú</string>
     <string name="patient_data">Datos del paciente:</string>
     <string name="treatments">Tratamientos</string>
@@ -66,5 +66,7 @@
     <string name="name_treatment">Nombre del tratamiento</string>
     <string name="add_medication">Añadir Medicación</string>
     <string name="delete_treatment">Eliminar tratamiento</string>
+    <string name="times_day">Veces al día</string>
+    <string name="init_hour">Hora de inicio</string>
 
 </resources>

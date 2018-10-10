@@ -3,16 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
     android:background="@drawable/rectangle_transparent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:id="@+id/ll_treatment"
+        android:id="@+id/ll_patient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="horizontal"
         android:paddingBottom="4dp"
         android:paddingTop="4dp">
@@ -24,7 +22,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_treatment_name"
+                android:id="@+id/med_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/comfortaa_bold"
@@ -34,14 +32,20 @@
 
 
             <TextView
-                android:id="@+id/tv_amount_of_meds"
+                android:id="@+id/init_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/comfortaa_bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorPrimaryDark" />
 
-
+            <TextView
+                android:id="@+id/times_a_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 
@@ -50,7 +54,6 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
         android:layout_height="2dp"
         android:background="@android:color/black"/>
 
