@@ -33,10 +33,12 @@ public class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.
 
     private List<Patient> patientList;
     private Context mContext;
+    private Finish finish;
 
-    public PatientListAdapter(List<Patient> patientList, Context mContext) {
+    public PatientListAdapter(List<Patient> patientList, Context mContext, Finish finish) {
         this.patientList = patientList;
         this.mContext = mContext;
+        this.finish = finish;
     }
 
     @NonNull
@@ -87,6 +89,7 @@ public class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.
                 intent.putExtra(Constants.PATIENT,patient);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
+                finish.onFinish();
                 
             }
         });
@@ -112,6 +115,10 @@ public class PatientListAdapter extends RecyclerView.Adapter<PatientListAdapter.
             ll_patient = itemView.findViewById(R.id.ll_patient);
             sex = itemView.findViewById(R.id.sex);
         }
+    }
+
+    public interface Finish{
+        void onFinish();
     }
 
 }

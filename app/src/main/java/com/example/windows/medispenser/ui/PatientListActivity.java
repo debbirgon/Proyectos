@@ -24,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PatientListActivity extends AppCompatActivity {
+public class PatientListActivity extends AppCompatActivity implements PatientListAdapter.Finish{
 
     private RecyclerView rv_patient_list;
     private PatientListAdapter patientListAdapter;
@@ -59,7 +59,8 @@ public class PatientListActivity extends AppCompatActivity {
                 if(response.code()==200){
                     patientList = response.body();
                     // specify an adapter (see also next example)
-                    patientListAdapter = new PatientListAdapter(patientList,getApplicationContext());
+                    patientListAdapter = new PatientListAdapter(patientList,getApplicationContext(),
+                            PatientListActivity.this);
                     rv_patient_list.setAdapter(patientListAdapter);
 
                 }else{
@@ -96,6 +97,11 @@ public class PatientListActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        finish();
+    }
+
+    @Override
+    public void onFinish() {
         finish();
     }
 }

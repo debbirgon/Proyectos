@@ -10,13 +10,13 @@ import java.io.Serializable;
 
 public class Treatment implements Serializable{
 
-    @SerializedName("ID")
+    @SerializedName(value = "id", alternate = "ID")
     private Integer id;
-    @SerializedName("ID_DEPENDIENTE")
+    @SerializedName(value = "id_dependiente", alternate = "ID_DEPENDIENTE")
     private Integer id_patient;
-    @SerializedName("ID_SPD")
+    @SerializedName(value = "id_spd", alternate = "ID_SPD")
     private Integer id_spd;
-    @SerializedName("ALIAS")
+    @SerializedName(value = "alias", alternate = "ALIAS")
     private String name;
 
     public Treatment(){

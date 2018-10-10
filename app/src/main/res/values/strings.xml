@@ -68,5 +68,9 @@
     <string name="delete_treatment">Eliminar tratamiento</string>
     <string name="times_day">Veces al día</string>
     <string name="init_hour">Hora de inicio</string>
+    <string name="delete">¿Desea eliminar</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="all_treatment">todo el tratamiento de</string>
 
 </resources>

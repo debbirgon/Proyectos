@@ -24,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class TreatmentListActivity extends AppCompatActivity {
+public class TreatmentListActivity extends AppCompatActivity implements TreatmentListAdapter.Finish{
     
     RecyclerView rv_treatment_list;
     Button btn_add_treatment;
@@ -53,13 +53,14 @@ public class TreatmentListActivity extends AppCompatActivity {
 
         TreatmentService treatmentService = ApiClient.getApiClient().create(TreatmentService.class);
 
-        treatmentService.getTreatments(1/*patient.getId_patient()*/).enqueue(new Callback<List<Treatment>>() {
+        treatmentService.getTreatments(patient.getId_patient()).enqueue(new Callback<List<Treatment>>() {
             @Override
             public void onResponse(Call<List<Treatment>> call, Response<List<Treatment>> response) {
                 if(response.code()==200){
                     treatmentList = response.body();
                     // specify an adapter (see also next example)
-                    treatmentListAdapter = new TreatmentListAdapter(treatmentList,getApplicationContext());
+                    treatmentListAdapter = new TreatmentListAdapter(treatmentList,getApplicationContext(), patient,
+                            TreatmentListActivity.this);
                     rv_treatment_list.setAdapter(treatmentListAdapter);
 
                 }else{
@@ -86,5 +87,18 @@ public class TreatmentListActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+        intent.putExtra(Constants.PATIENT,patient);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void onFinish() {
+        finish();
     }
 }
