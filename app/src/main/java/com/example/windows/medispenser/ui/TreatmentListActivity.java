@@ -30,6 +30,7 @@ public class TreatmentListActivity extends AppCompatActivity {
     Button btn_add_treatment;
     List<Treatment> treatmentList;
     TreatmentListAdapter treatmentListAdapter;
+    Patient patient;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +38,13 @@ public class TreatmentListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_treatment_list);
 
         Bundle extraPatient = getIntent().getExtras();
-        Patient patient = (Patient) extraPatient.getSerializable(Constants.PATIENT);
+        patient = (Patient) extraPatient.getSerializable(Constants.PATIENT);
 
 
         rv_treatment_list = (RecyclerView) findViewById(R.id.rv_treatment_list);
         btn_add_treatment = findViewById(R.id.btn_add_treatment);
-        
+
+
         treatmentList = new ArrayList<>();
 
         rv_treatment_list.setHasFixedSize(true);
@@ -51,7 +53,7 @@ public class TreatmentListActivity extends AppCompatActivity {
 
         TreatmentService treatmentService = ApiClient.getApiClient().create(TreatmentService.class);
 
-        treatmentService.getTreatments(patient.getId_patient()).enqueue(new Callback<List<Treatment>>() {
+        treatmentService.getTreatments(1/*patient.getId_patient()*/).enqueue(new Callback<List<Treatment>>() {
             @Override
             public void onResponse(Call<List<Treatment>> call, Response<List<Treatment>> response) {
                 if(response.code()==200){
@@ -76,9 +78,13 @@ public class TreatmentListActivity extends AppCompatActivity {
         btn_add_treatment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),AddTreatmentActivity.class));
+                Intent intent = new Intent(getApplicationContext(), AddTreatmentActivity.class);
+                intent.putExtra(Constants.PATIENT,patient);
+                startActivity(intent);
                 finish();
             }
         });
+
+
     }
 }

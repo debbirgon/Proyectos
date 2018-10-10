@@ -9,14 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.windows.medispenser.R;
 import com.example.windows.medispenser.api.ApiClient;
 import com.example.windows.medispenser.api.DoseService;
 import com.example.windows.medispenser.model.Dose;
 import com.example.windows.medispenser.model.Treatment;
-import com.example.windows.medispenser.ui.MenuActivity;
+import com.example.windows.medispenser.ui.TreatmentDetailActivity;
 import com.example.windows.medispenser.util.Constants;
 
 import java.util.List;
@@ -56,9 +55,9 @@ public class TreatmentListAdapter extends RecyclerView.Adapter<TreatmentListAdap
                     int amount = response.body().size();
                     String sAmount;
                     if(amount != 1) {
-                        sAmount = amount + mContext.getString(R.string.meds);
+                        sAmount = amount +" " +mContext.getString(R.string.meds);
                     }else{
-                        sAmount = amount +mContext.getString(R.string.med);
+                        sAmount = amount + " " +mContext.getString(R.string.med);
                     }
                     holder.tv_treatment_name.setText(treatment.getName());
                     holder.tv_amount_of_meds.setText(sAmount);
@@ -74,12 +73,11 @@ public class TreatmentListAdapter extends RecyclerView.Adapter<TreatmentListAdap
         holder.ll_treatment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext,"onFailure",
-                        Toast.LENGTH_SHORT).show();
-                /*Intent intent = new Intent(mContext, MenuActivity.class);
+                Intent intent = new Intent(mContext, TreatmentDetailActivity.class);
                 intent.putExtra(Constants.TREATMENT,treatment);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                mContext.startActivity(intent);*/
+                mContext.startActivity(intent);
+
 
             }
         });
