@@ -64,7 +64,6 @@
     <string name="med">Medicamento</string>
     <string name="add_treatment">Añadir tratamiento</string>
     <string name="name_treatment">Nombre del tratamiento</string>
-    <string name="add_medication">Añadir Medicación</string>
     <string name="delete_treatment">Eliminar tratamiento</string>
     <string name="times_day">Veces al día</string>
     <string name="init_hour">Hora de inicio</string>
@@ -72,5 +71,12 @@
     <string name="accept">Aceptar</string>
     <string name="cancel">Cancelar</string>
     <string name="all_treatment">todo el tratamiento de</string>
+    <string name="info">Información</string>
+    <string name="add_load">Cargar nivel</string>
+    <string name="delete_load">Eliminar carga actual</string>
+    <string name="amount_lef">Nº de pastillas restantes:</string>
+    <string name="load">Cargar</string>
+    <string name="amount_of_pills">Nº pastillas</string>
+    <string name="no_med">Ningún medicamento añadido</string>
 
 </resources>

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.windows.medispenser.R;
+import com.example.windows.medispenser.model.Patient;
 import com.example.windows.medispenser.util.Constants;
 
 public class SpdActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class SpdActivity extends AppCompatActivity {
     TextView level_1;
     TextView level_2;
     TextView level_3;
-    SharedPreferences sharedPreferences;
+    Patient patient;
 
 
     @Override
@@ -28,34 +29,44 @@ public class SpdActivity extends AppCompatActivity {
         level_1 = findViewById(R.id.level_1);
         level_2 = findViewById(R.id.level_2);
         level_3 = findViewById(R.id.level_3);
-        sharedPreferences
-                = getApplicationContext()
-                .getSharedPreferences(Constants.SHARED_PREF, MODE_PRIVATE);
+
+        patient = (Patient) getIntent().getExtras().getSerializable(Constants.PATIENT);
 
         level_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-                intent.putExtra(Constants.LEVEL,1);
-                startActivity(intent);
+                startLoadActivity(1);
             }
         });
         level_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-                intent.putExtra(Constants.LEVEL,2);
-                startActivity(intent);
+                startLoadActivity(2);
             }
         });
         level_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
-                intent.putExtra(Constants.LEVEL,3);
-                startActivity(intent);
+                startLoadActivity(3);
             }
         });
 
     }
+
+    public void startLoadActivity(int level){
+        Intent intent = new Intent(getApplicationContext(), LoadActivity.class);
+        intent.putExtra(Constants.LEVEL,level);
+        intent.putExtra(Constants.PATIENT,patient);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+        intent.putExtra(Constants.PATIENT,patient);
+        startActivity(intent);
+        finish();
+    }
 }
+
+

@@ -53,7 +53,7 @@ public class PatientListActivity extends AppCompatActivity implements PatientLis
 
         PersonService patientService = ApiClient.getApiClient().create(PersonService.class);
 
-        patientService.getAllPatients(3).enqueue(new Callback<List<Patient>>() {
+        patientService.getAllPatients(4).enqueue(new Callback<List<Patient>>() {
             @Override
             public void onResponse(Call<List<Patient>> call, Response<List<Patient>> response) {
                 if(response.code()==200){

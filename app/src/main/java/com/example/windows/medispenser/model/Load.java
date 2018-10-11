@@ -18,7 +18,7 @@ public class Load implements Serializable{
     @SerializedName(value = "id_dependiente", alternate = "ID_DEPENDIENTE")
     private Integer id_patient;
     @SerializedName(value = "cantidad", alternate = "CANTIDAD")
-    private Integer quantity;
+    private Integer amount;
     @SerializedName(value = "nivel", alternate = "NIVEL")
     private Integer level;
 
@@ -54,12 +54,12 @@ public class Load implements Serializable{
         this.id_patient = id_patient;
     }
 
-    public Integer getQuantity() {
-        return quantity;
+    public Integer getAmount() {
+        return amount;
     }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
+    public void setAmount(Integer amount) {
+        this.amount = amount;
     }
 
     public Integer getLevel() {

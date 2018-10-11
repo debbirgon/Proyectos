@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context="com.example.windows.medispenser.ui.MenuActivity">
+
+
+    <TextView
+        android:id="@+id/tv_level"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.75"
+        android:fontFamily="@font/science_fair"
+        android:gravity="center"
+        android:text="@string/level"
+        android:textColor="@android:color/black"
+        android:textSize="60sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_med_name_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/tv_amount_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:gravity="center"
+    android:layout_marginHorizontal="40dp"
+    android:layout_weight="0.5"
+    android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_add_load"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rectangle_grey"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/add_load"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black" />
+
+
+    <Button
+        android:id="@+id/btn_delete_load"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="@drawable/rectangle_grey"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/delete_load"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black" />
+
+
+
+
+</LinearLayout>
+
+
+</LinearLayout>
+
+

@@ -26,26 +26,25 @@
         android:layout_marginHorizontal="40dp"
         android:layout_weight="0.75"
         android:orientation="vertical">
-            <TextView
-                android:id="@+id/tv_patient_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:fontFamily="@font/comfortaa_bold"
-                android:text="@string/patient_data"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimaryDark" /><ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"><LinearLayout
+        <TextView
+            android:id="@+id/tv_patient_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/patient_data"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" /></ScrollView></LinearLayout><LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginHorizontal="40dp"
-    android:layout_weight="0.25"
-    android:gravity="center"
-    android:orientation="vertical">
+        android:layout_marginHorizontal="40dp"
+        android:layout_weight="0.25"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/btn_treatments"
