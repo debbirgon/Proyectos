@@ -107,6 +107,7 @@ public class AddMedActivity extends AppCompatActivity {
                             if(response.code()==200){
                                 Intent intent = new Intent(getApplicationContext(), TreatmentDetailActivity.class);
                                 intent.putExtra(Constants.TREATMENT,treatment);
+                                intent.putExtra(Constants.PATIENT,patient);
                                 startActivity(intent);
                                 finish();
                             }else {
@@ -123,6 +124,7 @@ public class AddMedActivity extends AppCompatActivity {
                                             "Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $")){
                                 Intent intent = new Intent(getApplicationContext(), TreatmentDetailActivity.class);
                                 intent.putExtra(Constants.TREATMENT,treatment);
+                                intent.putExtra(Constants.PATIENT,patient);
                                 startActivity(intent);
                                 finish();
                             }

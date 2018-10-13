@@ -85,11 +85,11 @@
 	        android:textColor="@android:color/black" />
 
         <EditText
-	        android:id="@+id/et_patient_birthday"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
 	        android:layout_marginBottom="15dp"
-	        android:autofillHints=""
+			android:id="@+id/et_patient_birthday"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:autofillHints=""
 	        android:background="@drawable/rectangle_white"
 	        android:focusable="false"
 	        android:fontFamily="@font/comfortaa_bold"

@@ -44,8 +44,8 @@ public class LoginActivity extends AppCompatActivity {
         btn_access.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String user_pref = sharedPreferences.getString(getString(R.string.user_pref),"");
-                String pass_pref = sharedPreferences.getString(getString(R.string.pass_pref),"");
+                String user_pref = sharedPreferences.getString(Constants.USER_PREF,"");
+                String pass_pref = sharedPreferences.getString(Constants.PASS_PREF,"");
 
                 if(user_pref == null || user_pref ==""){
                     Toast.makeText(getApplicationContext(), getString(R.string.must_create_user),

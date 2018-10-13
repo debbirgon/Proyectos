@@ -7,8 +7,6 @@
     <string name="keep_session">Mantener la sesión iniciada</string>
     <string name="access">Acceder</string>
     <string name="forgotten_password">Reestablecer la contraseña</string>
-    <string name="user_pref">USER_PREF</string>
-    <string name="pass_pref">PASS_PREF</string>
     <string name="must_create_user">Debe crear el usuario antes de acceder.</string>
     <string name="login_ok">Ha iniciado sesión correctamente</string>
     <string name="login_fail">Campo(s) usuario y/o contraseña incorrecto(s)</string>
