@@ -1,5 +1,6 @@
 package com.example.windows.medispenser.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -14,6 +15,7 @@ import com.example.windows.medispenser.R;
 import com.example.windows.medispenser.api.ApiClient;
 import com.example.windows.medispenser.api.DoseService;
 import com.example.windows.medispenser.model.Dose;
+import com.example.windows.medispenser.model.Patient;
 import com.example.windows.medispenser.model.Treatment;
 import com.example.windows.medispenser.ui.TreatmentDetailActivity;
 import com.example.windows.medispenser.util.Constants;
@@ -29,10 +31,14 @@ public class TreatmentListAdapter extends RecyclerView.Adapter<TreatmentListAdap
 
     private List<Treatment> treatmentList;
     private Context mContext;
+    private Patient patient;
+    private Finish finish;
 
-    public TreatmentListAdapter(List<Treatment> treatmentList, Context mContext) {
+    public TreatmentListAdapter(List<Treatment> treatmentList, Context mContext, Patient patient, Finish finish) {
         this.treatmentList = treatmentList;
         this.mContext = mContext;
+        this.patient = patient;
+        this.finish = finish;
     }
 
     @NonNull
@@ -59,7 +65,15 @@ public class TreatmentListAdapter extends RecyclerView.Adapter<TreatmentListAdap
                     }else{
                         sAmount = amount + " " +mContext.getString(R.string.med);
                     }
-                    holder.tv_treatment_name.setText(treatment.getName());
+                    String name;
+                    String[] nameSplit = treatment.getName().split("-");
+                    if(nameSplit.length>1){
+                        name = nameSplit[1].trim();
+                    }else{
+                        name = nameSplit[0].trim();
+                    }
+                    treatment.setName(name);
+                    holder.tv_treatment_name.setText(name);
                     holder.tv_amount_of_meds.setText(sAmount);
                 }
             }
@@ -75,8 +89,10 @@ public class TreatmentListAdapter extends RecyclerView.Adapter<TreatmentListAdap
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, TreatmentDetailActivity.class);
                 intent.putExtra(Constants.TREATMENT,treatment);
+                intent.putExtra(Constants.PATIENT,patient);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
+                finish.onFinish();
 
 
             }
@@ -101,5 +117,9 @@ public class TreatmentListAdapter extends RecyclerView.Adapter<TreatmentListAdap
             tv_amount_of_meds = itemView.findViewById(R.id.tv_amount_of_meds);
             ll_treatment = itemView.findViewById(R.id.ll_treatment);
         }
+    }
+
+    public interface Finish{
+        void onFinish();
     }
 }

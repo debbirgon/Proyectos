@@ -19,16 +19,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.SpdActivity" />
-        <activity android:name=".ui.LevelActivity" />
         <activity android:name=".ui.AddMedActivity" />
-        <activity android:name=".ui.AddTakeActivity" />
         <activity android:name=".ui.PatientListActivity" />
         <activity android:name=".ui.AddPatientActivity" />
         <activity android:name=".ui.MenuActivity" />
         <activity android:name=".ui.SignUpActivity" />
         <activity android:name=".ui.TreatmentListActivity" />
         <activity android:name=".ui.AddTreatmentActivity" />
-        <activity android:name=".ui.TreatmentDetailActivity"></activity>
+        <activity android:name=".ui.TreatmentDetailActivity" />
+        <activity android:name=".ui.LoadActivity" />
+        <activity android:name=".ui.AddLoadActivity"></activity>
     </application>
 
 </manifest>

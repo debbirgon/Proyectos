@@ -14,4 +14,6 @@ public class Constants {
     public static final String KEEP = "KEEP";
     public static final String SHARED_PREF = "PREF_MED";
     public static final String TREATMENT = "TREATMENT";
+    public static final String USER_PREF ="USER_PREF";
+    public static final String PASS_PREF = "PASS_PREF";
 }

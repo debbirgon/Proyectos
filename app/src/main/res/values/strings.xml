@@ -7,8 +7,6 @@
     <string name="keep_session">Mantener la sesión iniciada</string>
     <string name="access">Acceder</string>
     <string name="forgotten_password">Reestablecer la contraseña</string>
-    <string name="user_pref">USER_PREF</string>
-    <string name="pass_pref">PASS_PREF</string>
     <string name="must_create_user">Debe crear el usuario antes de acceder.</string>
     <string name="login_ok">Ha iniciado sesión correctamente</string>
     <string name="login_fail">Campo(s) usuario y/o contraseña incorrecto(s)</string>
@@ -64,10 +62,19 @@
     <string name="med">Medicamento</string>
     <string name="add_treatment">Añadir tratamiento</string>
     <string name="name_treatment">Nombre del tratamiento</string>
-    <string name="add_medication">Añadir Medicación</string>
     <string name="delete_treatment">Eliminar tratamiento</string>
     <string name="times_day">Veces al día</string>
     <string name="init_hour">Hora de inicio</string>
-    <string name="date_format">yyyy-mm-dd</string>
+    <string name="delete">¿Desea eliminar</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="all_treatment">todo el tratamiento de</string>
+    <string name="info">Información</string>
+    <string name="add_load">Cargar nivel</string>
+    <string name="delete_load">Eliminar carga actual</string>
+    <string name="amount_lef">Nº de pastillas restantes:</string>
+    <string name="load">Cargar</string>
+    <string name="amount_of_pills">Nº pastillas</string>
+    <string name="no_med">Ningún medicamento añadido</string>
 
 </resources>

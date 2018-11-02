@@ -122,7 +122,7 @@ public class AddPatientActivity extends AppCompatActivity {
                 patient.setName(et_patient_name.getText().toString());
                 patient.setSurname(et_patient_surname.getText().toString());
                 patient.setBirthday(et_patient_birthday.getText().toString());
-                patient.setId_carer(3);
+                patient.setId_carer(4);
                 patient.setAlias(RandomStringUtils.random(5,true,false));
 
                 if(patient.getSex()==null || patient.getName().equals("")

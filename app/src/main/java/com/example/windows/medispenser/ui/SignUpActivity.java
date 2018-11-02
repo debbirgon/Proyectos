@@ -2,6 +2,7 @@ package com.example.windows.medispenser.ui;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +21,7 @@ import com.example.windows.medispenser.api.ApiClient;
 import com.example.windows.medispenser.api.PersonService;
 import com.example.windows.medispenser.model.Carer;
 import com.example.windows.medispenser.model.Sex;
+import com.example.windows.medispenser.util.Constants;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -43,6 +45,7 @@ public class SignUpActivity extends AppCompatActivity {
     Spinner spinner_sex_signUp;
     Carer carer;
     DatePickerDialog.OnDateSetListener myDateSetListener;
+    SharedPreferences sharedPreferences;
 
 
     @Override
@@ -58,6 +61,8 @@ public class SignUpActivity extends AppCompatActivity {
         btn_signUp = findViewById(R.id.btn_signUp);
         spinner_sex_signUp = findViewById(R.id.spinner_sex_signUp);
         carer = new Carer();
+        sharedPreferences = getApplicationContext()
+                .getSharedPreferences(Constants.SHARED_PREF, MODE_PRIVATE);
 
         final List<String> listSex = new ArrayList<>();
         listSex.add(getString(R.string.select));
@@ -143,6 +148,10 @@ public class SignUpActivity extends AppCompatActivity {
                         public void onResponse(Call<Carer> call, Response<Carer> response) {
 
                             if(response.code()==200){
+                                sharedPreferences.edit().putString(Constants.USER_PREF,
+                                        et_user_signUp.getText().toString()).apply();
+                                sharedPreferences.edit().putString(Constants.PASS_PREF,
+                                        et_pass_signUp.getText().toString()).apply();
                                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                                 Toast.makeText(getApplicationContext(),getString(R.string.register_ok),
                                         Toast.LENGTH_LONG).show();
@@ -154,6 +163,10 @@ public class SignUpActivity extends AppCompatActivity {
                             if(t.getMessage()
                                     .equals("java.lang.IllegalStateException: " +
                                             "Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $")){
+                                sharedPreferences.edit().putString(Constants.USER_PREF,
+                                        et_user_signUp.getText().toString()).apply();
+                                sharedPreferences.edit().putString(Constants.PASS_PREF,
+                                        et_pass_signUp.getText().toString()).apply();
                                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                                 Toast.makeText(getApplicationContext(),getString(R.string.register_ok),
                                         Toast.LENGTH_LONG).show();

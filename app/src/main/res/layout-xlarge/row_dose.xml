@@ -48,6 +48,15 @@
                 android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:id="@+id/deleteDose"
+            android:textSize="50dp"
+            android:gravity="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="x"/>
 
 
     </LinearLayout>

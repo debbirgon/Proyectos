@@ -24,6 +24,7 @@ public class AddTreatmentActivity extends AppCompatActivity {
     EditText et_treatment_name;
     Button btn_addTreatment;
     Treatment treatment;
+    Patient patient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class AddTreatmentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_treatment);
 
         Bundle extraPatient = getIntent().getExtras();
-        Patient patient = (Patient) extraPatient.getSerializable(Constants.PATIENT);
+        patient = (Patient) extraPatient.getSerializable(Constants.PATIENT);
 
         et_treatment_name = findViewById(R.id.et_treatment_name);
         btn_addTreatment = findViewById(R.id.btn_addTreatment);
@@ -54,7 +55,9 @@ public class AddTreatmentActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<Treatment> call, Response<Treatment> response) {
                             if(response.code()==200){
-                                startActivity(new Intent(getApplicationContext(), TreatmentListActivity.class));
+                                Intent intent = new Intent(getApplicationContext(), TreatmentListActivity.class);
+                                intent.putExtra(Constants.PATIENT,patient);
+                                startActivity(intent);
                                 finish();
                             }else {
                                 Toast.makeText(getApplicationContext(), "Conflict",
@@ -67,7 +70,9 @@ public class AddTreatmentActivity extends AppCompatActivity {
                             if(t.getMessage()
                                     .equals("java.lang.IllegalStateException: " +
                                             "Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $")){
-                                startActivity(new Intent(getApplicationContext(),TreatmentListActivity.class));
+                                Intent intent = new Intent(getApplicationContext(), TreatmentListActivity.class);
+                                intent.putExtra(Constants.PATIENT,patient);
+                                startActivity(intent);
                                 finish();
                             }
                         }
@@ -78,5 +83,13 @@ public class AddTreatmentActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), TreatmentListActivity.class);
+        intent.putExtra(Constants.PATIENT,patient);
+        startActivity(intent);
+        finish();
     }
 }

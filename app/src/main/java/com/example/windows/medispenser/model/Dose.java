@@ -10,17 +10,17 @@ import java.io.Serializable;
 
 public class Dose implements Serializable{
 
-    @SerializedName(value = "ID", alternate = "id")
+    @SerializedName(value = "id", alternate = "ID")
     private Integer id;
-    @SerializedName(value = "HORA_INICIO",alternate = "hora_inicio")
+    @SerializedName(value = "hora_inicio",alternate = "HORA_INICIO")
     private String hora_inicio;
-    @SerializedName(value = "VECES_POR_DIA",alternate = "veces_por_dia")
+    @SerializedName(value = "veces_por_dia",alternate = "VECES_POR_DIA")
     private Integer veces_dia;
     @SerializedName(value = "nombre_medicamento")
     private String nombre_medicamento;
-    @SerializedName(value = "ID_MEDICAMENTO", alternate = "id_medicamento")
+    @SerializedName(value = "id_medicamento", alternate = "ID_MEDICAMENTO")
     private Integer id_medicamento;
-    @SerializedName(value = "ID_TRATAMIENTO",alternate = "id_tratamiento")
+    @SerializedName(value = "id_tratamiento",alternate = "ID_TRATAMIENTO")
     private Integer id_tratamiento;
 
     public Dose() {

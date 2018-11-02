@@ -138,7 +138,7 @@
                 android:autofillHints=""
                 android:background="@drawable/rectangle_white"
                 android:fontFamily="@font/comfortaa_bold"
-                android:hint="@string/date_format"
+                android:hint="@string/birthday"
                 android:inputType="text"
                 android:maxHeight="35dp"
                 android:maxLines="1"

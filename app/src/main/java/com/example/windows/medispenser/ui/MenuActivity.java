@@ -38,6 +38,7 @@ public class MenuActivity extends AppCompatActivity {
                 Intent goTreatment = new Intent(getApplicationContext(), TreatmentListActivity.class);
                 goTreatment.putExtra(Constants.PATIENT,patient);
                 startActivity(goTreatment);
+                finish();
             }
         });
 
@@ -47,7 +48,15 @@ public class MenuActivity extends AppCompatActivity {
                 Intent goSpd = new Intent(getApplicationContext(), SpdActivity.class);
                 goSpd.putExtra(Constants.PATIENT,patient);
                 startActivity(goSpd);
+                finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), PatientListActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

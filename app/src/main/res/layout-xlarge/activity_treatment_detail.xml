@@ -21,7 +21,7 @@
         android:textSize="50sp" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_treatment_list"
+        android:id="@+id/rv_med_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -45,7 +45,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/rectangle_grey"
             android:fontFamily="@font/comfortaa_bold"
-            android:text="@string/add_medication"
+            android:text="@string/add_med"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
 
@@ -65,5 +65,3 @@
 
 
 </LinearLayout>
-
-

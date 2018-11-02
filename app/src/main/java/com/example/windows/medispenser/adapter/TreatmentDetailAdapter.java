@@ -28,10 +28,12 @@ public class TreatmentDetailAdapter extends RecyclerView.Adapter<TreatmentDetail
 
     private List<Dose> doseList;
     private Context mContext;
+    private OnDeleteDose onDeleteDose;
 
-    public TreatmentDetailAdapter(List<Dose> doseList, Context mContext) {
+    public TreatmentDetailAdapter(List<Dose> doseList, Context mContext, OnDeleteDose onDeleteDose) {
         this.doseList = doseList;
         this.mContext = mContext;
+        this.onDeleteDose = onDeleteDose;
     }
 
     @NonNull
@@ -56,12 +58,20 @@ public class TreatmentDetailAdapter extends RecyclerView.Adapter<TreatmentDetail
             public void onResponse(Call<Med> call, Response<Med> response) {
                 if(response.code() == 200){
                     holder.med_name.setText(response.body().getName());
+                    dose.setNombre_medicamento(response.body().getName());
                 }
             }
 
             @Override
             public void onFailure(Call<Med> call, Throwable t) {
 
+            }
+        });
+
+        holder.deleteDose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onDeleteDose.onDeleteDoseClicked(dose);
             }
         });
 
@@ -78,6 +88,7 @@ public class TreatmentDetailAdapter extends RecyclerView.Adapter<TreatmentDetail
         TextView med_name;
         TextView init_time;
         TextView times_a_day;
+        TextView deleteDose;
 
         public TreatmentDetailViewHolder(View itemView) {
             super(itemView);
@@ -85,6 +96,15 @@ public class TreatmentDetailAdapter extends RecyclerView.Adapter<TreatmentDetail
             med_name = itemView.findViewById(R.id.med_name);
             init_time = itemView.findViewById(R.id.init_time);
             times_a_day = itemView.findViewById(R.id.times_a_day);
+            deleteDose = itemView.findViewById(R.id.deleteDose);
         }
     }
+    public interface OnDeleteDose{
+        void onDeleteDoseClicked(Dose dose);
+    }
+
 }
+
+
+
+
