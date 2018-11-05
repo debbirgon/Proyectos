@@ -3,10 +3,12 @@
     <string name="login">Login</string>
     <string name="user">Usuario</string>
     <string name="pass">Contraseña</string>
+    <string name="forgotten_pass">¿Olvidaste tu contraseña?</string>
+    <string name="repeat_pass">Repite la contraseña</string>
     <string name="create_user">Crear usuario</string>
     <string name="keep_session">Mantener la sesión iniciada</string>
     <string name="access">Acceder</string>
-    <string name="forgotten_password">Reestablecer la contraseña</string>
+    <string name="forgotten_password">Reestablecer contraseña</string>
     <string name="must_create_user">Debe crear el usuario antes de acceder.</string>
     <string name="login_ok">Ha iniciado sesión correctamente</string>
     <string name="login_fail">Campo(s) usuario y/o contraseña incorrecto(s)</string>

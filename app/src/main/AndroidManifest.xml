@@ -28,7 +28,8 @@
         <activity android:name=".ui.AddTreatmentActivity" />
         <activity android:name=".ui.TreatmentDetailActivity" />
         <activity android:name=".ui.LoadActivity" />
-        <activity android:name=".ui.AddLoadActivity"></activity>
+        <activity android:name=".ui.AddLoadActivity" />
+        <activity android:name=".forgotten_password"></activity>
     </application>
 
 </manifest>
