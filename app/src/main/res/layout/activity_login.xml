@@ -112,7 +112,7 @@
 	        android:textColor="@android:color/black" />
 
 		<Button
-			android:id="@+id/@btn_forgotter_pass"
+			android:id="@+id/forgotten_pass"
 			android:layout_width="match_parent"
 			android:layout_height="35dp"
 			android:layout_marginBottom="10dp"
@@ -131,7 +131,7 @@
 	    <!--android:layout_marginTop="50dp"-->
 	    <!--android:background="@drawable/rectangle_transparent"-->
 	    <!--android:fontFamily="@font/comfortaa_bold"-->
-	    <!--android:text="@string/forgotten_password"-->
+	    <!--android:text="@strForgottenPasswordActivityword"-->
 	    <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
 	    <!--android:textColor="@android:color/black" />-->
 

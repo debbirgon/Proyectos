@@ -20,6 +20,7 @@ import com.example.windows.medispenser.api.ApiClient;
 import com.example.windows.medispenser.api.PersonService;
 import com.example.windows.medispenser.model.Patient;
 import com.example.windows.medispenser.model.Sex;
+import com.example.windows.medispenser.util.Constants;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -40,11 +41,14 @@ public class AddPatientActivity extends AppCompatActivity {
     Spinner spinner_sex;
     Patient patient;
     DatePickerDialog.OnDateSetListener myDateSetListener;
+    int id_carer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_patient);
+
+        id_carer = getIntent().getExtras().getInt(Constants.ID_CARER);
 
         et_patient_name = findViewById(R.id.et_patient_name);
         et_patient_surname = findViewById(R.id.et_patient_surname);
@@ -122,7 +126,7 @@ public class AddPatientActivity extends AppCompatActivity {
                 patient.setName(et_patient_name.getText().toString());
                 patient.setSurname(et_patient_surname.getText().toString());
                 patient.setBirthday(et_patient_birthday.getText().toString());
-                patient.setId_carer(4);
+                patient.setId_carer(id_carer);
                 patient.setAlias(RandomStringUtils.random(5,true,false));
 
                 if(patient.getSex()==null || patient.getName().equals("")

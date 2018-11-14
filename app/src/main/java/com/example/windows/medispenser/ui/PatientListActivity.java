@@ -32,6 +32,7 @@ public class PatientListActivity extends AppCompatActivity implements PatientLis
     private Button btn_add_patient;
     private Button btn_exit;
     private SharedPreferences sharedPreferences;
+    private int id_carer;
 
 
     @Override
@@ -41,6 +42,7 @@ public class PatientListActivity extends AppCompatActivity implements PatientLis
         setContentView(R.layout.activity_patient_list);
 
         sharedPreferences = getApplication().getSharedPreferences(Constants.SHARED_PREF,MODE_PRIVATE);
+        id_carer = 4;//getIntent().getExtras().getInt(Constants.ID_CARER);
 
         rv_patient_list = (RecyclerView) findViewById(R.id.rv_patient_list);
         btn_add_patient = findViewById(R.id.btn_add_patient);
@@ -53,7 +55,7 @@ public class PatientListActivity extends AppCompatActivity implements PatientLis
 
         PersonService patientService = ApiClient.getApiClient().create(PersonService.class);
 
-        patientService.getAllPatients(4).enqueue(new Callback<List<Patient>>() {
+        patientService.getAllPatients(id_carer).enqueue(new Callback<List<Patient>>() {
             @Override
             public void onResponse(Call<List<Patient>> call, Response<List<Patient>> response) {
                 if(response.code()==200){
@@ -88,7 +90,9 @@ public class PatientListActivity extends AppCompatActivity implements PatientLis
         btn_add_patient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),AddPatientActivity.class));
+                Intent intent = new Intent(getApplicationContext(),AddPatientActivity.class);
+                intent.putExtra(Constants.ID_CARER, id_carer);
+                startActivity(intent);
                 finish();
             }
         });
