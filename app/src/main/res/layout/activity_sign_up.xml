@@ -205,7 +205,7 @@
 	        android:layout_height="35dp"
 	        android:layout_marginHorizontal="10dp"
 	        android:layout_marginBottom="10dp"
-	        android:background="@drawable/buttom"
+	        android:background="@drawable/rectangle_grey"
 	        android:fontFamily="@font/comfortaa_bold"
 	        android:text="@string/create_user"
 	        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
