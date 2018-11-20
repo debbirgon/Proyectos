@@ -67,7 +67,7 @@
             android:id="@+id/btn_addTreatment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/buttom"
+            android:background="@drawable/rectangle_grey"
             android:fontFamily="@font/comfortaa_bold"
             android:text="@string/add"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"

@@ -1,104 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:animationCache="true"
-	android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animationCache="true"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context="com.example.windows.medispenser.ui.LoginActivity">
 
-	<ImageView
-		android:layout_width="200dp"
-		android:layout_height="200dp"
-		android:layout_gravity="center_horizontal"
-		android:layout_marginBottom="10dp"
-		android:adjustViewBounds="false"
-		android:background="@drawable/logo_trans_med"
-		android:cropToPadding="false" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/science_fair"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="60sp" />
 
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginHorizontal="40dp"
-		android:orientation="vertical">
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:layout_marginHorizontal="40dp"
+	    android:layout_marginBottom="25dp"
+	    android:layout_weight="0.75"
+	    android:orientation="vertical">
 
-		<TextView
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginBottom="5dp"
-			android:fontFamily="@font/comfortaa_bold"
-			android:text="@string/user"
-			android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-			android:textColor="@android:color/black" />
+        <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="5dp"
+	        android:fontFamily="@font/comfortaa_bold"
+	        android:text="@string/user"
+	        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+	        android:textColor="@android:color/black" />
 
-		<EditText
-			android:id="@+id/et_user"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginBottom="10dp"
-			android:autofillHints="@string/user"
-			android:background="@drawable/rectangle_white"
-			android:fontFamily="@font/comfortaa_bold"
-			android:hint="@string/user"
-			android:inputType="text"
-			android:maxLines="1"
-			android:paddingVertical="4dp"
-			android:textAlignment="center" />
+        <EditText
+	        android:id="@+id/et_user"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="30dp"
+	        android:autofillHints="@string/user"
+	        android:background="@drawable/rectangle_white"
+	        android:fontFamily="@font/comfortaa_bold"
+	        android:hint="@string/user"
+	        android:inputType="text"
+	        android:maxHeight="35dp"
+	        android:maxLines="1"
+	        android:paddingVertical="4dp"
+	        android:textAlignment="center" />
 
-		<TextView
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginBottom="5dp"
-			android:fontFamily="@font/comfortaa_bold"
-			android:text="@string/pass"
-			android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-			android:textColor="@android:color/black" />
+        <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="5dp"
+	        android:fontFamily="@font/comfortaa_bold"
+	        android:text="@string/pass"
+	        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+	        android:textColor="@android:color/black" />
 
-		<EditText
-			android:id="@+id/et_pass"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:autofillHints="@string/pass"
-			android:background="@drawable/rectangle_white"
-			android:fontFamily="@font/comfortaa_bold"
-			android:hint="@string/pass"
-			android:inputType="textPassword"
-			android:maxLines="1"
-			android:paddingVertical="4dp"
-			android:textAlignment="center" />
-	</LinearLayout>
+        <EditText
+	        android:id="@+id/et_pass"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="30dp"
+	        android:autofillHints="@string/pass"
+	        android:background="@drawable/rectangle_white"
+	        android:fontFamily="@font/comfortaa_bold"
+	        android:hint="@string/pass"
+	        android:inputType="textPassword"
+	        android:maxHeight="35dp"
+	        android:maxLines="1"
+	        android:paddingVertical="4dp"
+	        android:textAlignment="center" />
+    </LinearLayout>
 
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginHorizontal="40dp"
-		android:layout_marginVertical="20dp"
-		android:orientation="vertical">
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="fill_vertical"
+	    android:layout_marginHorizontal="40dp"
+	    android:layout_marginVertical="20dp"
+	    android:layout_weight="0.25"
+	    android:orientation="vertical">
 
 		<Button
-			android:id="@+id/btn_access"
-			android:layout_width="match_parent"
-			android:layout_height="35dp"
-			android:layout_marginBottom="10dp"
-			android:layout_marginHorizontal="10dp"
-			android:background="@drawable/buttom"
-			android:fontFamily="@font/comfortaa_bold"
-			android:text="@string/access"
-			android:textAlignment="center"
-			android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-			android:textColor="@android:color/black" />
+	        android:id="@+id/btn_access"
+	        android:layout_width="match_parent"
+	        android:layout_height="35dp"
+	        android:layout_marginHorizontal="10dp"
+	        android:layout_marginBottom="10dp"
+	        android:background="@drawable/rectangle_grey"
+	        android:fontFamily="@font/comfortaa_bold"
+	        android:text="@string/access"
+	        android:textAlignment="center"
+	        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+	        android:textColor="@android:color/black" />
 
-		<Button
-			android:id="@+id/btn_createUser"
-			android:layout_width="match_parent"
-			android:layout_height="35dp"
-			android:layout_marginBottom="10dp"
-			android:layout_marginHorizontal="10dp"
-			android:background="@drawable/buttom"
-			android:fontFamily="@font/comfortaa_bold"
-			android:text="@string/create_user"
-			android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-			android:textColor="@android:color/black"
-			android:textSize="18sp" />
+        <Button
+	        android:id="@+id/btn_createUser"
+	        android:layout_width="match_parent"
+	        android:layout_height="35dp"
+	        android:layout_marginHorizontal="10dp"
+	        android:layout_marginBottom="10dp"
+	        android:background="@drawable/rectangle_grey"
+	        android:fontFamily="@font/comfortaa_bold"
+	        android:text="@string/create_user"
+	        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+	        android:textColor="@android:color/black" />
 
 		<Button
 			android:id="@+id/forgotten_pass"
@@ -106,25 +117,25 @@
 			android:layout_height="35dp"
 			android:layout_marginBottom="10dp"
 			android:layout_marginHorizontal="10dp"
-			android:background="@drawable/buttom"
+			android:background="@drawable/rectangle_grey"
 			android:fontFamily="@font/comfortaa_bold"
 			android:text="@string/forgotten_password"
 			android:textAppearance="@style/TextAppearance.AppCompat.Medium"
 			android:textColor="@android:color/black" />
 
 		<!--<Button-->
-		<!--andridd:idid@+id/btn_forgotten_password"-->
-		<!--android:layout_width="match_parent"-->
-		<!--android:layout_height="35dp"-->
-		<!--android:layout_marginHorizontal="10dp"-->
-		<!--android:layout_marginTop="50dp"-->
-		<!--android:background="@drawable/rectangle_transparent"-->
-		<!--android:fontFamily="@font/comfortaa_bold"-->
-		<!--android:text="@strForgottenPasswordActivityword"-->
-		<!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
-		<!--android:textColor="@android:color/black" />-->
+	    <!--andridd:idid@+id/btn_forgotten_password"-->
+	    <!--android:layout_width="match_parent"-->
+	    <!--android:layout_height="35dp"-->
+	    <!--android:layout_marginHorizontal="10dp"-->
+	    <!--android:layout_marginTop="50dp"-->
+	    <!--android:background="@drawable/rectangle_transparent"-->
+	    <!--android:fontFamily="@font/comfortaa_bold"-->
+	    <!--android:text="@strForgottenPasswordActivityword"-->
+	    <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+	    <!--android:textColor="@android:color/black" />-->
 
-	</LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>
