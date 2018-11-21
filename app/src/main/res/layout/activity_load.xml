@@ -4,34 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     android:orientation="vertical"
     tools:context="com.example.windows.medispenser.ui.MenuActivity">
 
 
-    <TextView
-        android:id="@+id/tv_level"
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.75"
-        android:fontFamily="@font/science_fair"
-        android:gravity="center"
-        android:text="@string/level"
-        android:textColor="@android:color/black"
-        android:textSize="60sp" />
+        android:layout_height="50dp"
+        android:background="#2ca58d"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginLeft="0dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/comfortaa_bold"
+            android:gravity="center_horizontal"
+            android:text="@string/level"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorAccent" />
+
+
+        <ImageView
+            android:id="@+id/btn_settings"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="0dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/ic_settings" />
+
+    </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_gravity="center"
         android:layout_marginHorizontal="40dp"
-        android:layout_weight="1"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0.5"
         android:orientation="vertical">
-
 
         <TextView
             android:id="@+id/tv_med_name_load"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/comfortaa_bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -40,7 +71,7 @@
         <TextView
             android:id="@+id/tv_amount_left"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/comfortaa_bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -51,38 +82,34 @@
 
 
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:gravity="center"
-    android:layout_marginHorizontal="40dp"
-    android:layout_weight="0.5"
-    android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btn_add_load"
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/rectangle_grey"
-            android:fontFamily="@font/comfortaa_bold"
-            android:text="@string/add_load"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/black" />
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_delete_load"
+        android:id="@+id/btn_add_load"
         android:layout_width="match_parent"
-        android:layout_height="34dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/rectangle_grey"
         android:fontFamily="@font/comfortaa_bold"
-        android:text="@string/delete_load"
-        android:visibility="gone"
+        android:text="@string/add_load"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@android:color/black" />
 
-
-
+        <Button
+            android:id="@+id/btn_delete_load"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rectangle_grey"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/delete_load"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black" />
 
 </LinearLayout>
 

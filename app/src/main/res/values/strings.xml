@@ -78,5 +78,7 @@
     <string name="load">Cargar</string>
     <string name="amount_of_pills">Nº pastillas</string>
     <string name="no_med">Ningún medicamento añadido</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="settings">Opciones</string>
 
 </resources>
