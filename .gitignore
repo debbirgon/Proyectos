@@ -7,4 +7,8 @@
 /build
 /captures
 .externalNativeBuild
-
+codestyles
+_windows
+/debugger.xml
+/ui.lnf.xml
+/androidStudioFirstRun.xml
