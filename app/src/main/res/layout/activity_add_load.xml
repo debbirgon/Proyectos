@@ -1,48 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     android:orientation="vertical"
     tools:context="com.example.windows.medispenser.ui.AddLoadActivity">
 
-
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:layout_weight="0.5"
-        android:orientation="vertical">
+        android:layout_height="50dp"
+        android:background="#2ca58d"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginLeft="0dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/ic_back" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/science_fair"
-            android:text="@string/load"
-            android:textColor="@android:color/black"
-            android:textSize="60sp" />
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/comfortaa_bold"
+            android:gravity="center_horizontal"
+            android:text="@string/add_load"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorAccent" />
 
-        <TextView
-            android:id="@+id/tv_level_addLoad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/science_fair"
-            android:text="@string/level"
-            android:textColor="@android:color/black"
-            android:textSize="60sp" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/btn_settings"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="0dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/ic_settings" />
+
+    </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
         android:layout_gravity="center"
         android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0.5"
         android:orientation="vertical">
-
-
 
         <TextView
             android:layout_width="match_parent"
@@ -55,14 +68,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginBottom="5dp"
-            android:paddingVertical="2dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/rectangle_white"
-            android:fontFamily="@font/comfortaa_bold">
+            android:fontFamily="@font/comfortaa_bold"
+            android:paddingVertical="2dp">
+
             <Spinner
                 android:id="@+id/spinner_meds"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center" />
 
         </LinearLayout>
@@ -72,7 +86,6 @@
             android:layout_height="25dp"
             android:fontFamily="@font/comfortaa_bold"
             android:text="@string/amount"
-            android:layout_marginTop="40dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
 
@@ -88,30 +101,29 @@
             android:maxHeight="35dp"
             android:maxLines="1"
             android:paddingVertical="4dp"
-            android:textAlignment="center"
-            android:autofillHints="" />
+            android:textAlignment="center" />
 
     </LinearLayout>
 
     <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="40dp"
+    android:layout_marginVertical="20dp"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_load"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginVertical="20dp"
-        android:orientation="vertical">
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle_grey"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/load"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black" />
 
-        <Button
-            android:id="@+id/btn_load"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/rectangle_grey"
-            android:fontFamily="@font/comfortaa_bold"
-            android:text="@string/load"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/black" />
-
-    </LinearLayout>
+</LinearLayout>
 
 </LinearLayout>

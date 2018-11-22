@@ -25,7 +25,6 @@ public class SpdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spd);
 
-
         level_1 = findViewById(R.id.level_1);
         level_2 = findViewById(R.id.level_2);
         level_3 = findViewById(R.id.level_3);
