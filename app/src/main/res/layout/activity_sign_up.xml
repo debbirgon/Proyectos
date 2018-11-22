@@ -24,6 +24,16 @@
             android:paddingTop="10dp"
             android:srcCompat="@android:drawable/ic_menu_revert"
             app:srcCompat="@drawable/ic_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/comfortaa_bold"
+            android:gravity="center_horizontal"
+            android:text="@string/level"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorAccent" />
 
 
         <ImageView
@@ -35,7 +45,7 @@
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:srcCompat="@android:drawable/ic_menu_preferences"
-            app:srcCompat="@drawable/ic_action_settings" />
+            app:srcCompat="@drawable/ic_settings" />
 
     </android.support.v7.widget.Toolbar>
 
